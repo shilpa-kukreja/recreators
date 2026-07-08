@@ -15,7 +15,7 @@ export const AppContextProvider = ({ children }) => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/blog/getblog");
+      const response = await axios.get("https://recreators.onrender.com/api/blog/getblog");
       if (response.data && Array.isArray(response.data)) {
         setBlogs(response.data);
         console.log("response.data", response.data);

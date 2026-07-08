@@ -40,7 +40,7 @@ const Subscription = () => {
   const fetchSubscribers = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:5000/api/subscriber/getsubscriber");
+      const response = await axios.get("https://recreators.onrender.com/api/subscriber/getsubscriber");
       setSubscribers(response.data);
       // toast.success("Subscribers loaded successfully");
     } catch (error) {
@@ -53,7 +53,7 @@ const Subscription = () => {
 
   const handleUnsubscribe = async (email) => {
     try {
-      await axios.delete(`http://localhost:5000/api/subscriber/removeSubscriber/${email}`);
+      await axios.delete(`https://recreators.onrender.com/api/subscriber/removeSubscriber/${email}`);
       toast.success("Subscriber removed successfully");
       setSubscribers((prev) => prev.filter((sub) => sub.email !== email));
       setDeleteConfirm(null);

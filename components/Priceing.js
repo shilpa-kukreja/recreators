@@ -11,7 +11,7 @@
 //    const fetchData = async () => {
 //     try {
 //       setLoading(true);
-//       const res = await axios.get("http://localhost:5000/api/price/getprice");
+//       const res = await axios.get("https://recreators.onrender.com/api/price/getprice");
 //       setPricing(res.data.data || []);
 //     } catch (err) {
 //       toast.error("❌ Failed to fetch pricing data");
@@ -206,7 +206,7 @@
 //   const fetchData = async () => {
 //     try {
 //       setLoading(true);
-//       const res = await axios.get("http://localhost:5000/api/price/getprice");
+//       const res = await axios.get("https://recreators.onrender.com/api/price/getprice");
 //       setPricing(res.data.data || []);
 //     } catch (err) {
 //       toast.error("❌ Failed to fetch pricing data");
@@ -331,7 +331,7 @@ export const Priceing2 = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/price/getprice");
+      const res = await axios.get("https://recreators.onrender.com/api/price/getprice");
       setPricing(res.data.data || []);
     } catch (err) {
       toast.error("❌ Failed to fetch pricing data");

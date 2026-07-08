@@ -21,7 +21,7 @@ export default function ListCoupon({ token }) {
 
   const fetchCoupons = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/coupon/get", {
+      const { data } = await axios.get("https://recreators.onrender.com/api/coupon/get", {
         headers: { token },
       });
       setCoupons(data.coupons);
@@ -35,7 +35,7 @@ export default function ListCoupon({ token }) {
   const toggleStatus = async (id) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/coupon/${id}/toggle`,
+        `https://recreators.onrender.com/api/coupon/${id}/toggle`,
         {},
         { headers: { token } }
       );
@@ -52,7 +52,7 @@ export default function ListCoupon({ token }) {
 
   const deleteCoupon = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/coupon/${id}`, {
+      await axios.delete(`https://recreators.onrender.com/api/coupon/${id}`, {
         headers: { token },
       });
       setCoupons((prev) => prev.filter((c) => c._id !== id));

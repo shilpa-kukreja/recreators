@@ -58,7 +58,7 @@ export default function AddCategoryPage() {
       if (categoryId) {
         try {
           setLoading(true);
-          const res = await axios.get(`http://localhost:5000/api/category/${categoryId}`);
+          const res = await axios.get(`https://recreators.onrender.com/api/category/${categoryId}`);
           
           const cat = res.data.category || res.data;
 
@@ -70,7 +70,7 @@ export default function AddCategoryPage() {
               description: cat.description || "",
               metatitle: cat.metatitle || "",
               metadescription: cat.metadescription || "",
-              image: cat?.image ? `http://localhost:5000${cat.image}` : "",
+              image: cat?.image ? `https://recreators.onrender.com${cat.image}` : "",
              
             });
 
@@ -78,7 +78,7 @@ export default function AddCategoryPage() {
             if (cat.image) {
               setPreviewImages(prev => ({
                 ...prev,
-                image: `http://localhost:5000${cat.image}`
+                image: `https://recreators.onrender.com${cat.image}`
               }));
             }
             
@@ -184,14 +184,14 @@ export default function AddCategoryPage() {
       
       if (editingCategory) {
         await axios.put(
-          `http://localhost:5000/api/category/updateCategory/${editingCategory._id}`,
+          `https://recreators.onrender.com/api/category/updateCategory/${editingCategory._id}`,
           formDataToSend,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
         toast.success("Category updated successfully!");
       } else {
         await axios.post(
-          "http://localhost:5000/api/category/addcategory",
+          "https://recreators.onrender.com/api/category/addcategory",
           formDataToSend,
           { headers: { "Content-Type": "multipart/form-data" } }
         );

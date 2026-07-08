@@ -357,7 +357,7 @@
 //     useEffect(() => {
 //     const fetchJobs = async () => {
 //       try {
-//         const res = await fetch("http://localhost:5000/api/carrer/careers");
+//         const res = await fetch("https://recreators.onrender.com/api/carrer/careers");
 //         const data = await res.json();
 //         setJobs(data);
 //         console.log(data);
@@ -407,7 +407,7 @@
 //       formPayload.append("resume", formData.resume);
 //     }
 
-//     const response = await fetch("http://localhost:5000/api/carrer/carrer-forms", {
+//     const response = await fetch("https://recreators.onrender.com/api/carrer/carrer-forms", {
 //       method: "POST",
 //       body: formPayload,
 //     });
@@ -972,7 +972,7 @@ export default function CareerPage() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/carrer/careers");
+        const res = await fetch("https://recreators.onrender.com/api/carrer/careers");
         const data = await res.json();
         setJobs(data);
       } catch (err) {
@@ -1013,7 +1013,7 @@ export default function CareerPage() {
         formPayload.append("resume", formData.resume);
       }
 
-      const response = await fetch("http://localhost:5000/api/carrer/carrer-forms", {
+      const response = await fetch("https://recreators.onrender.com/api/carrer/carrer-forms", {
         method: "POST",
         body: formPayload,
       });

@@ -71,7 +71,7 @@ const AddCareerPage = () => {
     if (editId) {
       setIsLoading(true);
       axios
-        .get(`http://localhost:5000/api/carrer/careers/${editId}`)
+        .get(`https://recreators.onrender.com/api/carrer/careers/${editId}`)
         .then(({ data }) => {
           setFormData({
             title: data.title || "",
@@ -145,10 +145,10 @@ const AddCareerPage = () => {
       };
 
       if (editId) {
-        const { data } = await axios.put(`http://localhost:5000/api/carrer/careers/${editId}`, payload);
+        const { data } = await axios.put(`https://recreators.onrender.com/api/carrer/careers/${editId}`, payload);
         toast.success(data.message || "Career opportunity updated successfully! 🎉");
       } else {
-        const { data } = await axios.post("http://localhost:5000/api/carrer/careers", payload);
+        const { data } = await axios.post("https://recreators.onrender.com/api/carrer/careers", payload);
         toast.success(data.message || "Career opportunity created successfully! 🎉");
       }
 

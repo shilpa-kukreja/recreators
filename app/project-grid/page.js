@@ -129,7 +129,7 @@ const Page = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/portfolio/getportfolio");
+        const res = await fetch("https://recreators.onrender.com/api/portfolio/getportfolio");
         const data = await res.json();
 
         // ✅ Adjust based on backend response
@@ -184,7 +184,7 @@ const Page = () => {
                   <div className="project-grid-item" data-aos="fade-up">
                     <div className="image">
                       <img
-                        src={`http://localhost:5000${project.portfolioImg}`}
+                        src={`https://recreators.onrender.com${project.portfolioImg}`}
                         alt={project.portfolioName}
                         className="w-[600px]  aspect-6/4 h-auto object-cover  rounded-lg"
                       />

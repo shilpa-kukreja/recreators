@@ -10,7 +10,7 @@ const Page = () => {
   const [blogsItems, setBlogItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blog/getblog") // adjust URL when deployed
+    fetch("https://recreators.onrender.com/api/blog/getblog") // adjust URL when deployed
       .then((res) => res.json())
       .then((data) => setBlogItems(data))
       .catch((err) => console.error("Error fetching blogs:", err));
@@ -35,7 +35,7 @@ const Page = () => {
                   >
                     <div className="blog-item style-three">
                       <div className="image">
-                        <img src={`http://localhost:5000${blog.blogImg}`} alt={blog.blogName} />
+                        <img src={`https://recreators.onrender.com${blog.blogImg}`} alt={blog.blogName} />
                       </div>
                       <div className="content">
                         <ul className="blog-meta">

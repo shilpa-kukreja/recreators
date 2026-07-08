@@ -7,7 +7,7 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blog/getblog")
+    fetch("https://recreators.onrender.com/api/blog/getblog")
       .then((res) => res.json())
       .then((data) => {
         // ✅ Show only the first 3 blogs
@@ -49,7 +49,7 @@ const Blog = () => {
                   <p dangerouslySetInnerHTML={{ __html: blog.blogDetail.substring(0, 150) + "..." }} />
                 </div>
                 <div className="image">
-                  <img src={`http://localhost:5000${blog.blogImg}`} alt={blog.blogName} />
+                  <img src={`https://recreators.onrender.com${blog.blogImg}`} alt={blog.blogName} />
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ export const Blog2 = ({ subtitleColor = "color-primary" }) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blog/getblog")
+    fetch("https://recreators.onrender.com/api/blog/getblog")
       .then((res) => res.json())
       .then((data) => {
         // ✅ Show only the first 3 blogs
@@ -111,7 +111,7 @@ export const Blog2 = ({ subtitleColor = "color-primary" }) => {
             >
               <div className="blog-item style-three">
                 <div className="image">
-                  <img src={`http://localhost:5000${blog.blogImg}`} alt={blog.blogName} className="!w-100 !h-[300px]" />
+                  <img src={`https://recreators.onrender.com${blog.blogImg}`} alt={blog.blogName} className="!w-100 !h-[300px]" />
                 </div>
                 <div className="content">
                   <ul className="blog-meta">

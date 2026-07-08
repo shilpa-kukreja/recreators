@@ -44,7 +44,7 @@ const ListCategory = () => {
   const fetchCategories = async () => {
     try {
       setIsLoading(true);
-      const res = await axios.get("http://localhost:5000/api/category/getcategory");
+      const res = await axios.get("https://recreators.onrender.com/api/category/getcategory");
       setCategories(res.data);
     
     } catch (error) {
@@ -60,7 +60,7 @@ const ListCategory = () => {
     if (!window.confirm("Are you sure you want to delete this category? This action cannot be undone.")) return;
     
     try {
-      await axios.delete(`http://localhost:5000/api/category/removeCategory/${id}`);
+      await axios.delete(`https://recreators.onrender.com/api/category/removeCategory/${id}`);
       toast.success("Category deleted successfully");
       fetchCategories();
     } catch (error) {
@@ -79,7 +79,7 @@ const ListCategory = () => {
 
     try {
       const deletePromises = Array.from(selectedCategories).map(id =>
-        axios.delete(`http://localhost:5000/api/categories/${id}`)
+        axios.delete(`https://recreators.onrender.com/api/categories/${id}`)
       );
       
       await Promise.all(deletePromises);
@@ -128,8 +128,8 @@ const ListCategory = () => {
       const dataToExport = filteredCategories.map(cat => ({
         'Category Name': cat.name,
         'URL Slug': cat.slug,
-        'Image URL': cat.img ? `http://localhost:5000${cat.img}` : 'Not available',
-        'Banner URL': cat.banner ? `http://localhost:5000${cat.banner}` : 'Not available',
+        'Image URL': cat.img ? `https://recreators.onrender.com${cat.img}` : 'Not available',
+        'Banner URL': cat.banner ? `https://recreators.onrender.com${cat.banner}` : 'Not available',
         'Description': cat.description || 'Not provided',
         'Created Date': cat.createdAt ? new Date(cat.createdAt).toLocaleDateString() : 'Unknown',
         'Last Updated': cat.updatedAt ? new Date(cat.updatedAt).toLocaleDateString() : 'Unknown'
@@ -473,7 +473,7 @@ const ListCategory = () => {
                             <div className="!h-10 !w-10 !flex-shrink-0 !overflow-hidden !rounded-lg !border !border-gray-200 !bg-gray-50">
                               {cat.image ? (
                                 <img
-                                  src={`http://localhost:5000${cat.image}`}
+                                  src={`https://recreators.onrender.com${cat.image}`}
                                   alt={cat.name}
                                   className="!h-full !w-full !object-cover"
                                 />

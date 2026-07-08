@@ -79,7 +79,7 @@ const BlogDetailsPage = ({ params }) => {
               <div className="blog-details-content">
                 <div className="image mb-35">
                   <img
-                    src={`http://localhost:5000${blog.blogImg}`}
+                    src={`https://recreators.onrender.com${blog.blogImg}`}
                     alt={blog.blogName}
                   />
                 </div>

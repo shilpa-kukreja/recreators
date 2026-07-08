@@ -48,7 +48,7 @@ export default function PortfolioList() {
   const fetchPortfolios = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/portfolio/getportfolio");
+      const res = await axios.get("https://recreators.onrender.com/api/portfolio/getportfolio");
       setPortfolios(res.data.data || []);
     } catch (err) {
       toast.error("❌ Failed to fetch portfolios");
@@ -116,7 +116,7 @@ export default function PortfolioList() {
   const handleDelete = async (id) => {
     if (!confirm("Are you sure you want to delete this portfolio? This action cannot be undone.")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/portfolio/${id}`);
+      await axios.delete(`https://recreators.onrender.com/api/portfolio/${id}`);
       toast.success("✅ Portfolio deleted successfully");
       fetchPortfolios();
     } catch (err) {
@@ -536,7 +536,7 @@ export default function PortfolioList() {
                     <div className="!relative !group">
                       <img
                         src={portfolio.portfolioImg
-                          ? `http://localhost:5000${portfolio.portfolioImg}`
+                          ? `https://recreators.onrender.com${portfolio.portfolioImg}`
                           : "/api/placeholder/80/80"}
                         alt={portfolio.portfolioName}
                         className="!w-full !h-48 !object-cover"
@@ -665,7 +665,7 @@ export default function PortfolioList() {
                             <div className="!flex !items-center !space-x-4">
                               <img
                                 src={portfolio.portfolioImg
-                                  ? `http://localhost:5000${portfolio.portfolioImg}`
+                                  ? `https://recreators.onrender.com${portfolio.portfolioImg}`
                                   : "/api/placeholder/80/80"}
                                 alt={portfolio.portfolioName}
                                 className="!w-12 !h-12 !object-cover !rounded-lg !shadow-sm"

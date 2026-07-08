@@ -30,7 +30,7 @@ const FooterMenu = () => {
     }
     try {
       const response = await fetch(
-        "http://localhost:5000/api/subscriber/addsubscriber",
+        "https://recreators.onrender.com/api/subscriber/addsubscriber",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
