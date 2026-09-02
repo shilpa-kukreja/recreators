@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -44,7 +44,7 @@ if (typeof window !== 'undefined') {
   ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
 }
 
-const PortfolioForm = ({onSuccess}) => {
+const PortfolioFormContent = ({onSuccess}) => {
   const [form, setForm] = useState({
     portfolioName: "",
     portfolioDate: new Date().toISOString().split("T")[0],
@@ -767,4 +767,10 @@ const PortfolioForm = ({onSuccess}) => {
   );
 };
 
-export default PortfolioForm;
+export default function PortfolioForm() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PortfolioFormContent />
+    </Suspense>
+  );
+}

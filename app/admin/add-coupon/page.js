@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import axios from "axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
@@ -21,7 +21,7 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 import AdminLayout from "../components/AdminLayout";
 
-export default function AddCoupon() {
+const AddCouponContent=()=> {
   const [formData, setFormData] = useState({
     couponCode: "",
     discount: "",
@@ -655,3 +655,13 @@ export default function AddCoupon() {
     </AdminLayout>
   );
 }
+
+
+export default function AddCoupon() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AddCouponContent />
+    </Suspense>
+  );
+}
+

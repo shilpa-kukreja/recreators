@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 import AdminLayout from "../components/AdminLayout";
@@ -44,7 +44,7 @@ if (typeof window !== 'undefined') {
   ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
 }
 
-const AdminAddBlog = () => {
+const AdminAddBlogContent = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const isEditMode = searchParams.get("id");
@@ -959,4 +959,10 @@ const AdminAddBlog = () => {
   );
 };
 
-export default AdminAddBlog;
+export default function AdminAddBlog() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AdminAddBlogContent />
+    </Suspense>
+  );
+}

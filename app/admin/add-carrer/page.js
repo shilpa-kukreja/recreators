@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense  } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -25,7 +25,7 @@ if (typeof window !== 'undefined') {
   ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
 }
 
-const AddCareerPage = () => {
+const AddCareerPageContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const editId = searchParams.get("id");
@@ -464,4 +464,10 @@ const AddCareerPage = () => {
   );
 };
 
-export default AddCareerPage;
+export default function AddCareerPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AddCareerPageContent />
+    </Suspense>
+  );
+}
