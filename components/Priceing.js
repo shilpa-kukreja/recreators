@@ -322,7 +322,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/navigation";
 
-export const Priceing2 = () => {
+const Priceing = () => {
   const [pricing, setPricing] = useState([]);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -467,3 +467,5 @@ export const Priceing2 = () => {
     </section>
   );
 };
+
+export default Priceing;
