@@ -11,7 +11,7 @@ const page = () => {
       <PageBanner pageTitle="brand catalogue" pageName="brand catalogue" />
 
       <section className="why-choose-area rel z-1">
-        <div className="container px-sm-0 bordered-x py-130 rpy-100">
+        <div className="container px-sm-0   py-130 rpy-100">
           <div className="row justify-content-between">
             <div
               className="col-xl-5 col-lg-6 mt-50 rmt-0 rmb-55"

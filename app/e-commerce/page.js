@@ -62,7 +62,7 @@ const services = [
     <RiddaLayout>
       <PageBanner pageTitle="E-Commerce" pageName="E-Commerce" />
       <section className="what-we-provide-area rel z-1">
-        <div className="container px-sm-0 bordered-x py-130 rpy-100">
+        <div className="container px-sm-0   py-130 rpy-100">
           <div className="row justify-content-between">
             <div
               className="col-lg-6 rmb-55"
@@ -113,7 +113,7 @@ const services = [
       </section>
       <WorkingProcess titleColor="" />
        <section className="blog-grid-page !w-full rel z-1">
-      <div className="container bordered-x px-sm-0 py-130 rpy-100">
+      <div className="container   px-sm-0 py-130 rpy-100">
         <div className="row">
           {/* ===== Left Section (Blogs) ===== */}
           <div className="">

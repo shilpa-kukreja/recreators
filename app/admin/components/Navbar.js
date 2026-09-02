@@ -93,7 +93,7 @@ const Navbar = ({ setToken }) => {
               
               <Link href="/" className="!flex !items-center !gap-2 !group">
                 <img
-                  src="../assets/images/logos/RCLogo.png"
+                  src="/assets/images/logos/RCLogo.png"
                   alt="Recreators Design Logo"
                   className="!w-5  sm:!w-32 !transition-transform !duration-300 group-hover:!scale-105"
                 />

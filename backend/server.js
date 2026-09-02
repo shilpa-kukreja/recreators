@@ -15,10 +15,11 @@ import pricingRoutes from './routes/pricingRoutes.js';
 import portfolioRoutes from './routes/portfolioRoutes.js';
 import paymentRoutes from './routes/paymentRoutes.js';
 import couponRouter from './routes/couponRoutes.js';
+import dns from "dns";
 
 
 
-
+dns.setServers(["1.1.1.1","8.8.8.8"]);
 const app = express();
 app.use(cors());
 app.use(express.json());

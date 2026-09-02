@@ -10,7 +10,7 @@ const ProjectListPage = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("https://recreators.onrender.com/api/portfolio/getportfolio");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/getportfolio`);
         const data = await res.json();
 
         // ✅ If API returns { success, data: [...] }
@@ -87,7 +87,7 @@ const ProjectListPage = () => {
                 </div>
                 <div className="image">
                   <img
-                    src={`https://recreators.onrender.com${project.portfolioImg}`}
+                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${project.portfolioImg}`}
                     alt={project.portfolioName}
                     className="w-[700px]  aspect-6/4 object-cover"
                   />

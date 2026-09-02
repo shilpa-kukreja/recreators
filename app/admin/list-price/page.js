@@ -48,7 +48,7 @@ const ListPrice = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://recreators.onrender.com/api/price/getprice");
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/getprice`);
       setPricing(res.data.data || []);
     } catch (err) {
       toast.error("❌ Failed to fetch pricing data");
@@ -65,7 +65,7 @@ const ListPrice = () => {
   const deletePlan = async (id) => {
     if (!window.confirm("Are you sure you want to delete this pricing plan? This action cannot be undone.")) return;
     try {
-      await axios.delete(`https://recreators.onrender.com/api/price/remove/${id}`);
+      await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/remove/${id}`);
       toast.success("✅ Pricing plan deleted successfully");
       fetchData();
     } catch (err) {

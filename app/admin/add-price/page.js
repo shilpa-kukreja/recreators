@@ -73,7 +73,7 @@
 //     if (editId) {
 //       setLoading(true);
 //       axios
-//         .get(`https://recreators.onrender.com/api/price/getpriceid/${editId}`)
+//         .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/getpriceid/${editId}`)
 //         .then(({ data }) => {
 //           setForm({
 //             title: data.title,
@@ -116,12 +116,12 @@
 
 //       if (editId) {
 //         await axios.put(
-//           `https://recreators.onrender.com/api/price/updateprice/${editId}`,
+//           `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/updateprice/${editId}`,
 //           payload
 //         );
 //         toast.success("✅ Pricing plan updated successfully!");
 //       } else {
-//         await axios.post("https://recreators.onrender.com/api/price/addprice", payload);
+//         await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/addprice`, payload);
 //         toast.success("🎉 Pricing plan added successfully!");
 //       }
 
@@ -635,7 +635,7 @@ useEffect(() => {
   if (editId) {
     setLoading(true);
     axios
-      .get(`https://recreators.onrender.com/api/price/getpriceid/${editId}`)
+      .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/getpriceid/${editId}`)
       .then(({ data }) => {
         if (data.success) {
           setForm({
@@ -682,12 +682,12 @@ useEffect(() => {
 
       if (editId) {
         await axios.put(
-          `https://recreators.onrender.com/api/price/updateprice/${editId}`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/updateprice/${editId}`,
           payload
         );
         toast.success("✅ Pricing plan updated successfully!");
       } else {
-        await axios.post("https://recreators.onrender.com/api/price/addprice", payload);
+        await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/addprice`, payload);
         toast.success("🎉 Pricing plan added successfully!");
       }
 

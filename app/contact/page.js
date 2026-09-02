@@ -23,7 +23,7 @@ const page = () => {
       };
   
       try {
-        const res = await fetch("https://recreators.onrender.com/api/contact/contact", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact/contact`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
@@ -49,7 +49,7 @@ const page = () => {
       <PageBanner pageTitle="Contact" pageName="Contact" />
       <WhyChooseUs3 className="why-choose-contact-page" />
       <section className="contact-form-area">
-        <div className="container bordered-x px-sm-0 pb-120 rpb-90">
+        <div className="container px-sm-0 pb-120 rpb-90">
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div

@@ -66,7 +66,7 @@
 //   ];
 //   return (
 //     <section className="pricing-area rel z-2">
-//       <div className="container px-sm-0 bordered-x pt-130 rpt-100 pb-100 rpb-70">
+//       <div className="container px-sm-0   pt-130 rpt-100 pb-100 rpb-70">
 //         <Tab.Container defaultActiveKey="monthly">
 //           <div className="row justify-content-center">
 //             <div
@@ -231,7 +231,7 @@
 
 //   return (
 //     <section className="pricing-area rel z-2">
-//       <div className="container px-sm-0 bordered-x pt-130 rpt-100 pb-100 rpb-70">
+//       <div className="container px-sm-0   pt-130 rpt-100 pb-100 rpb-70">
 //         <Tab.Container defaultActiveKey="monthly">
 //           <div className="row justify-content-center">
 //             <div
@@ -331,7 +331,7 @@ export const Priceing2 = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://recreators.onrender.com/api/price/getprice");
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/getprice`);
       setPricing(res.data.data || []);
     } catch (err) {
       toast.error("❌ Failed to fetch pricing data");
@@ -386,7 +386,7 @@ export const Priceing2 = () => {
 
   return (
     <section className="pricing-area rel z-2">
-      <div className="container px-sm-0 bordered-x sm:pt-130 !pt-10 rpt-100 pb-100 rpb-70">
+      <div className="container px-sm-0   sm:pt-130 !pt-10 rpt-100 pb-100 rpb-70">
         <Tab.Container defaultActiveKey="monthly">
           <div className="row justify-content-center">
             <div

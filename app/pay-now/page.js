@@ -648,7 +648,7 @@ export default function PayNowPage() {
       setLoading(true);
       
       // 1. Create order
-      const { data: order } = await axios.post("https://recreators.onrender.com/api/payment/order", {
+      const { data: order } = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/payment/order`, {
         amount: form.amount * 100, // Convert to paise
         currency: "INR",
       });
@@ -664,7 +664,7 @@ export default function PayNowPage() {
         handler: async function (response) {
           // 3. Verify & store payment
           try {
-            const verifyRes = await axios.post("https://recreators.onrender.com/api/payment/verify", {
+            const verifyRes = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/payment/verify`, {
               ...response,
               form: {
                 ...form,

@@ -3,7 +3,7 @@ import Link from "next/link";
 const PageBanner = ({ pageTitle, pageName, textCenter = false }) => {
   return (
     <section className="page-banner-area bgc-black text-white rel z-1 overflow-hidden">
-      <div className="container bordered-x py-200 rpt-100 rpb-120">
+      <div className="container   py-200 rpt-100 rpb-120">
         <div
           className={`banner-inner px-xl-4 pt-90 ${
             textCenter ? "text-center" : ""

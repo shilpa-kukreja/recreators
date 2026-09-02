@@ -188,7 +188,7 @@ const Faq = () => {
 
   return (
     <section className="faq-area bgc-black text-white rel z-1">
-      <div className="container bordered-x pb-90">
+      <div className="container   pb-90">
         <div className="row mx-xl-4 justify-content-center">
           <div className="col-xl-9 col-lg-11">
             <div
@@ -229,7 +229,7 @@ export default Faq;
 export const Faq2 = () => {
   return (
     <section className="faqs-area rel z-1">
-      <div className="container bordered-x px-sm-0 pb-120 rpb-90">
+      <div className="container   px-sm-0 pb-120 rpb-90">
         <div className="row justify-content-between">
           <div
             className="col-lg-4 rmb-55"
@@ -291,7 +291,7 @@ export const Faq3 = () => {
 
   return (
     <section className=" faqs-area rel z-1">
-      <div className="container bordered-x px-sm-0 sm:pt-50 !pt-10 rpt-100 pb-120 rpb-90">
+      <div className="container   px-sm-0 sm:pt-50 !pt-10 rpt-100 pb-120 rpb-90">
         <div className="row justify-content-between">
           <div className="col-lg-4 sm:mt-80 !mt-10 rmt-0">
             <div className="faq-tab-wrap sm:fixed !relative rmb-45">

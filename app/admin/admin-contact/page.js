@@ -46,7 +46,7 @@ export default function AdminContacts() {
   const fetchContacts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get("https://recreators.onrender.com/api/contact/contacts");
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact/contacts`);
       setContacts(data || []);
     } catch (error) {
       console.error("Error fetching contacts:", error);
@@ -60,7 +60,7 @@ export default function AdminContacts() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this contact?")) {
       try {
-        await axios.delete(`https://recreators.onrender.com/api/contact/contacts/${id}`);
+        await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact/contacts/${id}`);
         toast.success("Contact deleted successfully");
         fetchContacts();
       } catch (error) {

@@ -22,7 +22,7 @@ const CareerListPage = () => {
   const fetchCareers = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get("https://recreators.onrender.com/api/carrer/careers");
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/carrer/careers`);
       setCareers(data);
     } catch (error) {
       toast.error("Failed to fetch careers");
@@ -39,7 +39,7 @@ const CareerListPage = () => {
 
     try {
       setDeletingId(id);
-      await axios.delete(`https://recreators.onrender.com/api/carrer/careers/${id}`);
+      await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/carrer/careers/${id}`);
       toast.success("Career deleted successfully 🗑️");
       fetchCareers();
     } catch (error) {
@@ -78,7 +78,7 @@ const CareerListPage = () => {
 
   const handleView = async (id) => {
     try {
-      const { data } = await axios.get(`https://recreators.onrender.com/api/carrer/careers/${id}`);
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/carrer/careers/${id}`);
       setSelectedCareer(data);
       setIsModalOpen(true);
     } catch (error) {

@@ -14,7 +14,7 @@ const page = () => {
     <RiddaLayout>
       {/* Hero Area Start */}
       <section className="hero-area-four bgc-black text-white rel z-2">
-        <div className="container px-xxl-0 bordered-x pt-180 rpt-90">
+        <div className="container px-xxl-0  pt-180 rpt-90">
           <div className="row pt-50">
             <div className="col-xl-10">
               <div
@@ -122,7 +122,7 @@ const page = () => {
             <CounterItems />
           </div>
         </div>
-        <div className="container text-white blank-container bordered-x" />
+        <div className="container text-white blank-container " />
         <div className="counter-shapes">
           <div className="shape">
             <img src="assets/images/shapes/counter.png" alt="Shape" />
@@ -143,7 +143,7 @@ const page = () => {
       {/* Counter Area end */}
       {/* About Area start */}
       <section className="about-area rel z-1">
-        <div className="container bordered-x sm:pt-130 !pt-12 rpt-100 pb-100">
+        <div className="container  sm:pt-130 !pt-12 rpt-100 pb-100">
           <div className="row px-xl-5 justify-content-between align-items-center">
             <div className="col-xl-4 col-lg-5">
               <div className="about-circles rmb-55">
@@ -206,7 +206,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="container  bordered-x px-0">
+        <div className="container px-0">
           <img src="assets/images/about/Bannerhome.png" alt="About" />
         </div>
       </section>
@@ -217,7 +217,7 @@ const page = () => {
       {/* Services Area End */}
       {/* Working Process Area Start */}
       <section className="working-process-area bgc-black text-white rel z-1">
-        <div className="container bordered-x sm:pt-130 !pt-10 rpt-100 sm:!pb-10 !pb-10 rpb-50">
+        <div className="container sm:pt-130 !pt-10 rpt-100 sm:!pb-10 !pb-10 rpb-50">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9 col-md-11">
               <div
@@ -347,7 +347,7 @@ const page = () => {
       {/* Working Process Area End */}
       {/* Projects Area start */}
       <section className="project-area rel z-1">
-        <div className="container bordered-x px-sm-0 sm:py-130 !py-10 rpy-100">
+        <div className="container px-sm-0 sm:py-130 !py-10 rpy-100">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9">
               <div
@@ -521,7 +521,7 @@ const page = () => {
       {/* Projects Area end */}
       {/* Testimonials Area Start */}
       <section className="testimonials-two-area bgc-lighter rel z-1">
-        <div className="container px-0 bordered-x sm:pt-130 !pt-10 rpt-100 pb-170 rpb-140">
+        <div className="container px-0 sm:pt-130 !pt-10 rpt-100 pb-170 rpb-140">
           <div className="testimonials-and-clients bg-white br-10 bordered">
             <div className="row">
               <div className="col-lg-5">

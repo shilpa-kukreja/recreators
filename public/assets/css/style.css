@@ -950,12 +950,12 @@ a.theme-btn {
   border-radius: 0 0 10px 10px; }
 
 .bordered,
-.bordered-x,
+. ,
 .bordered-left {
   border-left: 1px solid var(--ridda-border-color); }
 
 .bordered,
-.bordered-x,
+. ,
 .bordered-right {
   border-right: 1px solid var(--ridda-border-color); }
 

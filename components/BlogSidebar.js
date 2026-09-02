@@ -73,7 +73,7 @@ const BlogSidebar = () => {
               <li key={blog._id}>
                 <div className="image">
                   <img
-                    src={`https://recreators.onrender.com${blog.blogImg}`}
+                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg}`}
                     alt={blog.blogName}
                   />
                 </div>

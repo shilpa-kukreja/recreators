@@ -45,7 +45,7 @@ const page = () => {
     <RiddaLayout>
       <PageBanner pageTitle="Blog" pageName="Blog Standard" />
       <section className="blog-list-page rel z-1">
-        <div className="container bordered-x px-sm-0 py-130 rpy-100">
+        <div className="container   px-sm-0 py-130 rpy-100">
           <div className="row">
             <div className="col-lg-8">
               {blogPosts.map((post, index) => (

@@ -121,7 +121,7 @@ export const CaseStudies2 = () => {
 
   return (
     <section id="case-study" className="case-studies-area bgc-lighter rel z-1">
-      <div className="container bordered-x bordered-top pt-110 pb-70 px-sm-0">
+      <div className="container   bordered-top pt-110 pb-70 px-sm-0">
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-9">
             <div

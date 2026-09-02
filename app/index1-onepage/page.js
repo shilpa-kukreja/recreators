@@ -24,7 +24,7 @@ const page = () => {
         className="hero-area-four bgc-black text-white rel z-2"
         id="home"
       >
-        <div className="container px-xxl-0 bordered-x pt-180 rpt-90">
+        <div className="container px-xxl-0 pt-180 rpt-90">
           <div className="row pt-50">
             <div className="col-xl-10">
               <div
@@ -122,7 +122,7 @@ const page = () => {
             <CounterItems />
           </div>
         </div>
-        <div className="container text-white blank-container bordered-x" />
+        <div className="container text-white blank-container  " />
         <div className="counter-shapes">
           <div className="shape">
             <img src="assets/images/shapes/counter.png" alt="Shape" />
@@ -143,7 +143,7 @@ const page = () => {
       {/* Counter Area end */}
       {/* About Area start */}
       <section className="about-area rel z-1" id="about">
-        <div className="container bordered-x pt-130 rpt-100 pb-100">
+        <div className="container   pt-130 rpt-100 pb-100">
           <div className="row px-xl-5 justify-content-between align-items-center">
             <div className="col-xl-4 col-lg-5">
               <div className="about-circles rmb-55">
@@ -210,7 +210,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="container bordered-x px-0">
+        <div className="container   px-0">
           <img src="assets/images/about/about.png" alt="About" />
         </div>
       </section>
@@ -220,7 +220,7 @@ const page = () => {
       {/* Services Area End */}
       {/* Working Process Area Start */}
       <section className="working-process-area bgc-black text-white rel z-1">
-        <div className="container bordered-x pt-130 rpt-100 pb-80 rpb-50">
+        <div className="container   pt-130 rpt-100 pb-80 rpb-50">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9 col-md-11">
               <div
@@ -354,7 +354,7 @@ const page = () => {
       {/* Working Process Area End */}
       {/* Projects Area start */}
       <section className="project-area rel z-1" id="projects">
-        <div className="container bordered-x px-sm-0 py-130 rpy-100">
+        <div className="container   px-sm-0 py-130 rpy-100">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9">
               <div
@@ -531,7 +531,7 @@ const page = () => {
         className="testimonials-two-area bgc-lighter rel z-1"
         id="testimonials"
       >
-        <div className="container px-0 bordered-x pt-130 rpt-100 pb-170 rpb-140">
+        <div className="container px-0   pt-130 rpt-100 pb-170 rpb-140">
           <div className="testimonials-and-clients bg-white br-10 bordered">
             <div className="row">
               <div className="col-lg-5">

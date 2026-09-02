@@ -30,7 +30,7 @@ const FooterMenu = () => {
     }
     try {
       const response = await fetch(
-        "https://recreators.onrender.com/api/subscriber/addsubscriber",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/subscriber/addsubscriber`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -54,7 +54,7 @@ const FooterMenu = () => {
   return (
     <Fragment>
       <div
-        className="container bordered-x pt-80 pb-20"
+        className="container pt-80 pb-20"
         style={{
           backgroundImage: "url(assets/images/background/footer-bg-dots.png)",
         }}
@@ -69,7 +69,7 @@ const FooterMenu = () => {
             <div className="footer-widget footer-newsletter">
               <div className="footer-logo mb-20">
                 <Link href="/">
-                  <img src="assets/images/logos/RCLogo.png" style={{ width: "200px" }} alt="Logo" />
+                  <img src="/assets/images/logos/RCLogo.png" style={{ width: "200px" }} alt="Logo" />
                 </Link>
               </div>
               <p>
@@ -160,7 +160,7 @@ const FooterMenu = () => {
                   <Link href="/web-development">Web Development</Link>
                 </li>
                  <li>
-                  <Link href="/web-design">Web Design</Link>
+                  <Link href="/web-designing">Web Design</Link>
                 </li>
               </ul>
             </div>
@@ -231,7 +231,7 @@ const FooterMenu = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container bordered-x bordered-top pt-30 pb-15">
+        <div className="container bordered-top pt-30 pb-15">
           <div className="row">
             <div className="col-lg-5">
               <div className="copyright-text text-center text-lg-start">
@@ -246,7 +246,7 @@ const FooterMenu = () => {
                   <Link href="about">Refund</Link>
                 </li>
                 <li>
-                  <Link href="about">Privacy Policy</Link>
+                  <Link href="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
                   <Link href="faqs">FAQs</Link>
@@ -268,7 +268,7 @@ const Footer1 = () => {
   return (
     <footer className="main-footer bgc-black text-white rel z-1">
       <div className="footer-marquee pt-60 pb-75 rpy-90 rel">
-        <div className="container blank-container bordered-x" />
+        <div className="container blank-container  " />
         <span className="marquee-wrap">
           <span className="marquee-inner left">
             <span className="marquee-item">Get In Touch</span>
@@ -290,7 +290,7 @@ const Footer1 = () => {
           </span>
         </span>
       </div>
-      <div className="container bordered-x pb-50">
+      <div className="container   pb-50">
         <div className="row justify-content-between">
           <div
             className="col-lg-4 col-sm-8"
@@ -301,7 +301,7 @@ const Footer1 = () => {
             <div className="footer-widget footer-newsletter">
               <div className="footer-logo mb-20">
                 <Link href="/">
-                  <img src="https://recreatorsdesign.com/assets/image/logo.png" style={{ width: "100px" }} alt="Logo" />
+                  <img src="/assets/images/logos/RCLogo.png" style={{ width: "100px" }} alt="Logo" />
                 </Link>
               </div>
               <p>
@@ -399,7 +399,7 @@ const Footer1 = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container bordered-x bordered-top pt-25 pb-10">
+        <div className="container   bordered-top pt-25 pb-10">
           <div className="row">
             <div className="col-lg-5">
               <div className="copyright-text text-center text-lg-start">
@@ -414,7 +414,7 @@ const Footer1 = () => {
                   <Link href="about">Refund</Link>
                 </li>
                 <li>
-                  <Link href="about">Privacy Policy</Link>
+                  <Link href="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
                   <Link href="faqs">FAQs</Link>
@@ -448,7 +448,7 @@ const Footer2 = () => {
 const Footer3 = () => {
   return (
     <footer className="main-footer bgc-black text-white">
-      <div className="container px-sm-0 bordered-x py-100">
+      <div className="container px-sm-0   py-100">
         <div className="row align-items-center justify-content-between">
           <div className="col-xl-5 col-lg-6">
             <div
@@ -499,7 +499,7 @@ const Footer3 = () => {
               </div>
               <div className="logo mt-60 rmt-35">
                 <Link href="/">
-                  <img src="https://recreatorsdesign.com/assets/image/logo.png" style={{ width: "100px" }} alt="Logo" />
+                  <img src="assets/images/logos/RCLogo.png" style={{ width: "100px" }} alt="Logo" />
                 </Link>
               </div>
             </div>
@@ -601,7 +601,7 @@ const Footer3 = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container px-sm-0 bordered-x bordered-top pt-30 pb-15">
+        <div className="container px-sm-0   bordered-top pt-30 pb-15">
           <div className="row">
             <div className="col-lg-5">
               <div className="copyright-text text-center text-lg-start">
@@ -616,7 +616,7 @@ const Footer3 = () => {
                   <Link href="about">Refund</Link>
                 </li>
                 <li>
-                  <Link href="about">Privacy Policy</Link>
+                  <Link href="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
                   <Link href="faqs">FAQs</Link>

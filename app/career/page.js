@@ -972,7 +972,7 @@ export default function CareerPage() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch("https://recreators.onrender.com/api/carrer/careers");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/carrer/careers`);
         const data = await res.json();
         setJobs(data);
       } catch (err) {
@@ -1013,7 +1013,7 @@ export default function CareerPage() {
         formPayload.append("resume", formData.resume);
       }
 
-      const response = await fetch("https://recreators.onrender.com/api/carrer/carrer-forms", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/carrer/carrer-forms`, {
         method: "POST",
         body: formPayload,
       });

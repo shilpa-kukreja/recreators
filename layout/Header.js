@@ -232,7 +232,7 @@
 //     <header className="main-header header-one white-menu menu-absolute">
 //       {/*Header-Upper*/}
 //       <div className="header-upper">
-//         <div className="container px-xxl-0 bordered-x clearfix">
+//         <div className="container px-xxl-0   clearfix">
 //           <div className="header-inner rel d-flex align-items-center">
 //             <div className="logo-outer">
 //               <div className="logo">
@@ -560,7 +560,7 @@
 //   return (
 //     <header className="main-header header-one white-menu menu-absolute">
 //       <div className="header-upper">
-//         <div className="container px-xxl-0 bordered-x clearfix">
+//         <div className="container px-xxl-0   clearfix">
 //           <div className="header-inner rel d-flex align-items-center justify-content-between">
 //             {/* Logo */}
 //             <div className="logo-outer">
@@ -1449,7 +1449,7 @@ const Header1 = () => {
           {/* Logo */}
           <Link href="/" className="inline-block">
             <img
-              src="assets/images/logos/RCLogo.png"
+              src="/assets/images/logos/RCLogo.png"
               alt="Logo"
               className="h-8 sm:h-8 md:h-8 "
             />
@@ -1476,7 +1476,7 @@ const Header1 = () => {
           <div className="!container !mx-auto !px-4 !flex !items-center !justify-between !py-4">
             <Link href="/" className="inline-block" onClick={() => setOpen(false)}>
               <img
-                src="assets/images/logos/RCLogo.png"
+                src="/assets/images/logos/RCLogo.png"
                 alt="Logo"
                 className="h-8 sm:h-8 md:h-8"
               />

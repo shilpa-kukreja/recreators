@@ -74,7 +74,7 @@ const PortfolioForm = ({onSuccess}) => {
     if (editId) {
       setLoading(true);
       axios
-        .get(`https://recreators.onrender.com/api/portfolio/getportfolio/${editId}`)
+        .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/getportfolio/${editId}`)
         .then(({ data }) => {
           const portfolio = data.data;
           setForm({
@@ -90,7 +90,7 @@ const PortfolioForm = ({onSuccess}) => {
             status: portfolio.status || "draft"
           });
           if (portfolio.portfolioImg) {
-            setImagePreview(`https://recreators.onrender.com${portfolio.portfolioImg}`);
+            setImagePreview(`${process.env.NEXT_PUBLIC_BACKEND_URL}${portfolio.portfolioImg}`);
           }
         })
         .catch((err) => {
@@ -190,14 +190,14 @@ const PortfolioForm = ({onSuccess}) => {
       if (editId) {
         // Update existing portfolio
         await axios.put(
-          `https://recreators.onrender.com/api/portfolio/updateportfolio/${editId}`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/updateportfolio/${editId}`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
         toast.success("🎉 Portfolio updated successfully!");
       } else {
         // Add new portfolio
-        await axios.post("https://recreators.onrender.com/api/portfolio/addportfolio", formData, {
+        await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/addportfolio`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         toast.success("🚀 Portfolio added successfully!");

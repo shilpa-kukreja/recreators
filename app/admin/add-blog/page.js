@@ -78,7 +78,7 @@ const AdminAddBlog = () => {
   const fetchCategories = async () => {
     try {
       setIsLoadingCategories(true);
-      const res = await axios.get("https://recreators.onrender.com/api/category/getcategory");
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/category/getcategory`);
       setCategories(res.data || []);
     } catch (error) {
       toast.error("Failed to fetch categories");
@@ -105,7 +105,7 @@ const AdminAddBlog = () => {
   const fetchBlogDetails = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`https://recreators.onrender.com/api/blog/${id}`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/${id}`);
       const blog = res.data;
 
       // Handle category data - convert string to array if needed
@@ -137,7 +137,7 @@ const AdminAddBlog = () => {
       });
 
       if (blog.blogImg) {
-        setImagePreview(`https://recreators.onrender.com${blog.blogImg}`);
+        setImagePreview(`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg}`);
       }
     } catch (error) {
       toast.error("Failed to fetch blog details.");
@@ -150,7 +150,7 @@ const AdminAddBlog = () => {
   // const checkSlugAvailability = async (slug) => {
   //   if (!slug) return true;
   //   try {
-  //     const res = await axios.get(`https://recreators.onrender.com/api/blog/check-slug/${slug}${isEditMode ? `?exclude=${id}` : ''}`);
+  //     const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/check-slug/${slug}${isEditMode ? `?exclude=${id}` : ''}`);
   //     return res.data.available;
   //   } catch (error) {
   //     return false;
@@ -314,8 +314,8 @@ const AdminAddBlog = () => {
       setLoading(true);
 
       const url = isEditMode
-        ? `https://recreators.onrender.com/api/blog/${id}`
-        : "https://recreators.onrender.com/api/blog/createblog";
+        ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/${id}`
+        : `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/createblog`;
 
       const method = isEditMode ? "PUT" : "POST";
 

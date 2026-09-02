@@ -45,7 +45,7 @@ const Services = ({ extraClass = "" }) => {
   ];
   return (
     <section className={`services-area ${extraClass}`} id="services">
-      <div className="container px-0 bordered-x bordered-top sm:py-130 !py-5 rpy-100">
+      <div className="container px-0   bordered-top sm:py-130 !py-5 rpy-100">
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-9 col-md-11">
             <div
@@ -115,7 +115,7 @@ export const Services2 = ({ extraClass = "pb-70" }) => {
 
   return (
     <section className="services-area rel z-1" id="services">
-      <div className={`container bordered-x px-sm-0 ${extraClass}`}>
+      <div className={`container   px-sm-0 ${extraClass}`}>
         <div className="row justify-content-center pb-35">
           <div
             className="col-xl-7 col-lg-9 text-center"
@@ -151,9 +151,9 @@ export const Services2 = ({ extraClass = "pb-70" }) => {
                   <Link href="service-details">{title}</Link>
                 </h4>
                 <p>{description}</p>
-                <Link href="service-details" className="read-more">
+                {/* <Link href="service-details" className="read-more">
                   Read More <i className="far fa-arrow-right" />
-                </Link>
+                </Link> */}
                 <div className="bg">
                   <img
                     src="assets/images/shapes/service-circle.png"

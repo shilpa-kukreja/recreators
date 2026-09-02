@@ -43,7 +43,7 @@ export default function ListBlog() {
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("https://recreators.onrender.com/api/blog/getblog");
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/getblog`);
         
         if (response.data && Array.isArray(response.data)) {
           setBlogs(response.data);
@@ -149,7 +149,7 @@ export default function ListBlog() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`https://recreators.onrender.com/api/blog/${id}`);
+      const response = await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/${id}`);
       setBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== id));
       setDeleteConfirm(null);
     } catch (error) {
@@ -444,7 +444,7 @@ export default function ListBlog() {
                             <div className="!flex-shrink-0">
                               <div className="!relative">
                                 <img
-                                  src={`https://recreators.onrender.com${blog.blogImg}`}
+                                  src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg}`}
                                   alt={blog.blogName}
                                   className="!w-24 !h-24 !rounded-xl !object-cover !shadow-md"
                                   onError={(e) => {

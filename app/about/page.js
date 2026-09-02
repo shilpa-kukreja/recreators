@@ -15,7 +15,7 @@ export default function page() {
       <WhyChooseUs2 bg="bgc-none" />
       <Team />
       <section className="testimonials-two-area rel z-1">
-        <div className="container px-0 bordered-x sm:pt-130 !pt-8 rpt-100 pb-170 rpb-140">
+        <div className="container px-0 sm:pt-130 !pt-8 rpt-100 pb-170 rpb-140">
           <div className="testimonials-and-clients bg-white br-10 bordered">
             <div className="row">
               <div className="col-lg-5">

@@ -63,7 +63,7 @@ export default WorkingProcess;
 export const WorkingProcess2 = ({ extraClass = "bgc-black text-white" }) => {
   return (
     <section className={`working-process-area rel z-1 ${extraClass}`}>
-      <div className="container px-sm-0 bordered-x pt-100 pb-70">
+      <div className="container px-sm-0   pt-100 pb-70">
         <div className="row justify-content-center">
           <div className="col-xl-9 col-lg-11">
             <div

@@ -21,7 +21,7 @@ const page = () => {
       {/* Hero Area Start */}
       <section className="hero-area-two bgc-black text-white rel z-2" id="home">
         <div
-          className="container bordered-x bordered-bottom bgp-bottom pt-195 rpt-150 pb-100"
+          className="container   bordered-bottom bgp-bottom pt-195 rpt-150 pb-100"
           style={{
             backgroundImage: "url(assets/images/background/hero-bg-dots.png)",
           }}
@@ -89,7 +89,7 @@ const page = () => {
       {/* Hero Area End */}
       {/* Client Logo Area start */}
       <div className="client-logo-area bgc-black">
-        <div className="container text-white bordered-x">
+        <div className="container text-white  ">
           <div className="client-logo-wrap pt-95 pb-85">
             <div
               className="text-center mb-40"
@@ -133,7 +133,7 @@ const page = () => {
       {/* Client Logo Area end */}
       {/* About Area start */}
       <section id="about" className="about-area-two rel z-1">
-        <div className="container bordered-x py-100">
+        <div className="container   py-100">
           <div className="row gap-100 justify-content-between align-items-center">
             <div
               className="col-lg-6"
@@ -207,7 +207,7 @@ const page = () => {
       {/* Testimonials Area Start */}
       <section id="testimonials" className="testimonials-two-area rel z-1">
         <div
-          className="container px-xl-5 bordered-x py-100"
+          className="container px-xl-5   py-100"
           style={{
             backgroundImage: "url(assets/images/background/cta-bg-dots.png)",
           }}
@@ -274,7 +274,7 @@ const page = () => {
       {/* FAQ Area End */}
       {/* Blog Area start */}
       <section id="blog" className="blog-area rel z-1">
-        <div className="container bordered-x pt-110 pb-70 px-sm-0">
+        <div className="container   pt-110 pb-70 px-sm-0">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9">
               <div
@@ -391,7 +391,7 @@ const page = () => {
       {/* Blog Area end */}
       {/* CTA Area Start */}
       <section className="cta-two-area rel z-1">
-        <div className="container px-sm-0 bordered-x pb-100">
+        <div className="container px-sm-0   pb-100">
           <div
             className="cta-two-wrap bgc-primary br-10"
             style={{

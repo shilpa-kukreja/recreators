@@ -68,11 +68,11 @@ export default function AdminDashboard() {
         subsRes,
         contactRes,
       ] = await Promise.all([
-        axios.get("https://recreators.onrender.com/api/carrer/carrer-forms"),
-        axios.get("https://recreators.onrender.com/api/payment/get"),
-        axios.get("https://recreators.onrender.com/api/price/getprice"),
-        axios.get("https://recreators.onrender.com/api/subscriber/getsubscriber"),
-        axios.get("https://recreators.onrender.com/api/contact/contacts"),
+        axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/carrer/carrer-forms`),
+        axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/payment/get`),
+        axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/price/getprice`),
+        axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/subscriber/getsubscriber`),
+        axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact/contacts`),
       ]);
 
       const subscribers = subsRes.data.slice(0, 5);

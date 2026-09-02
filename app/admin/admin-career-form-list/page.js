@@ -34,7 +34,7 @@ export default function AdminCareerList() {
   const fetchCareerForms = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://recreators.onrender.com/api/carrer/carrer-forms");
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/carrer/carrer-forms`);
       console.log(res.data);
       setCareerForms(res.data);
     } catch (err) {
@@ -80,7 +80,7 @@ export default function AdminCareerList() {
   const handleDelete = async (id) => {
     if (!confirm("Are you sure you want to delete this application?")) return;
     try {
-      await axios.delete(`https://recreators.onrender.com/api/career/career-forms/${id}`);
+      await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/career/career-forms/${id}`);
       setCareerForms(careerForms.filter((form) => form._id !== id));
       // Consider using a toast notification here
     } catch (err) {
@@ -344,7 +344,7 @@ export default function AdminCareerList() {
                         <td className="!px-6 !py-4">
                           <div className="!flex !flex-col !gap-2">
                             <a
-                              href={`https://recreators.onrender.com${form.resume}`}
+                              href={`${process.env.NEXT_PUBLIC_BACKEND_URL}${form.resume}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="!inline-flex !items-center !gap-2 !text-sm !text-blue-600 hover:!text-blue-800 !transition-colors"

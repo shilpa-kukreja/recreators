@@ -5,7 +5,7 @@
 //   return (
 //     <div>
 //          <section className="project-area rel z-1">
-//         <div className="container bordered-x px-sm-0 py-130 rpy-100">
+//         <div className="container   px-sm-0 py-130 rpy-100">
 //           <div className="row justify-content-center">
 //             <div className="col-xl-7 col-lg-9">
 //               <div
@@ -257,7 +257,7 @@ export const GalleryGrid = () => {
 
   return (
     <section className="project-area rel z-1">
-      <div className="container bordered-x px-sm-0 py-130 rpy-100">
+      <div className="container   px-sm-0 py-130 rpy-100">
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-9">
             <div

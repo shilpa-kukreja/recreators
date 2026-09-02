@@ -4,7 +4,7 @@ import CounterItems from "./CounterItems";
 const About = ({ counter }) => {
   return (
     <section className="about-area rel z-1">
-      <div className="container bordered-x sm:pt-130 !pt-10 rpt-100 sm:pb-100 !pb-5">
+      <div className="container   sm:pt-130 !pt-10 rpt-100 sm:pb-100 !pb-5">
         <div className="row px-xl-5 justify-content-between align-items-center">
           <div className="col-xl-4 col-lg-5">
             <div className="about-circles rmb-55">
@@ -69,7 +69,7 @@ const About = ({ counter }) => {
         </div>
       </div>
       <div
-        className={`container bordered-x px-0 ${
+        className={`container   px-0 ${
           counter && "about-counter rel "
         }`}
       >

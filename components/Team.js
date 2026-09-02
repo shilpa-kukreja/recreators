@@ -20,7 +20,7 @@ const Team = ({
 }) => {
   return (
     <section className={`team-area-two ${bg}`}>
-      <div className="container bordered-x sm:pt-130 !pt-10 rpt-100 sm:pb-100 !pb-5 rpb-70 px-sm-0">
+      <div className="container   sm:pt-130 !pt-10 rpt-100 sm:pb-100 !pb-5 rpb-70 px-sm-0">
         <div className="row justify-content-center">
           <div className="col-lg-12">
             <div

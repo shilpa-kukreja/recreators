@@ -155,13 +155,13 @@ export default function AddCoupon() {
       console.log(payload);
       if (editingCoupon) {
         response = await axios.put(
-          `https://recreators.onrender.com/api/coupon/${editingCoupon._id}`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/coupon/${editingCoupon._id}`,
           payload
         );
         toast.success("🎯 Coupon updated successfully!");
       } else {
         response = await axios.post(
-          "https://recreators.onrender.com/api/coupon/add",
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/coupon/add`,
           payload
         );
         toast.success("✨ Coupon created successfully!");

@@ -6,7 +6,7 @@ const page = () => {
     <RiddaLayout>
       <PageBanner pageTitle="Team Details" pageName="Team Details" />
       <section className="team-details-area">
-        <div className="container bordered-x py-130 rpy-100">
+        <div className="container   py-130 rpy-100">
           <div className="row gap-80 justify-content-center">
             <div className="col-lg-5">
               <div className="team-details-image text-xl-center rmb-55">

@@ -6,7 +6,7 @@ const page = () => {
     <RiddaLayout>
       <PageBanner pageTitle="Web Design" pageName="Service Details" />
       <section className="service-details-area rel z-1">
-        <div className="container bordered-x py-130 rpy-100 px-sm-0">
+        <div className="container   py-130 rpy-100 px-sm-0">
           <div className="section-title mb-50">
             <h2>
               Creating a modern website design involves combining aesthetics,

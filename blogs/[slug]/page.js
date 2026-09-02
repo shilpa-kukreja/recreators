@@ -23,7 +23,7 @@ const BlogDetailsPage = ({ params }) => {
   return (
     <RiddaLayout>
       <section className="page-banner-area bgc-black text-white rel z-1 overflow-hidden">
-        <div className="container bordered-x pt-200 rpy-100 pb-140">
+        <div className="container   pt-200 rpy-100 pb-140">
           <div className="banner-inner px-xl-5 pt-90 text-center">
             <h2>{blog.blogName}</h2>
             <ul className="blog-meta">
@@ -35,13 +35,13 @@ const BlogDetailsPage = ({ params }) => {
       </section>
 
       <section className="blog-details-page rel z-1">
-        <div className="container bordered-x px-sm-0 py-130 rpy-100">
+        <div className="container   px-sm-0 py-130 rpy-100">
           <div className="row">
             <div className="col-lg-8">
               <div className="blog-details-content">
                 <div className="image mb-35">
                   <img
-                    src={`https://recreators.onrender.com${blog.blogImg}`}
+                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg}`}
                     alt={blog.blogName}
                   />
                 </div>

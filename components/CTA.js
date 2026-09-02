@@ -21,7 +21,7 @@ const CTA = ({ extraClass }) => {
     };
 
     try {
-      const res = await fetch("https://recreators.onrender.com/api/contact/contact", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -45,7 +45,7 @@ const CTA = ({ extraClass }) => {
   return (
     <section className="cta-area-two !relative !z-10">
       <div
-        className={`!container !px-sm-0 !py-24 md:!py-32 !rounded-2xl !shadow-lg !text-center ${extraClass}`}
+        className={` !px-sm-0 !py-24 md:!py-32 !rounded-2xl !shadow-lg !text-center ${extraClass}`}
         style={{
           backgroundImage: "url(/assets/images/background/cta-bg-dots.png)",
           backgroundSize: "cover",

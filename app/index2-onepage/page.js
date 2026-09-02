@@ -16,7 +16,7 @@ const page = () => {
     <RiddaLayout bodyClass="home-two" header={2} footer={2} menus={menus}>
       {/* Hero Area Start */}
       <section className="hero-area text-white rel z-2" id="home">
-        <div className="container bordered-x pt-180 rpt-150 pb-85 rpb-55">
+        <div className="container   pt-180 rpt-150 pb-85 rpb-55">
           <div className="row pt-10 justify-content-center">
             <div className="col-xl-10">
               <div
@@ -47,7 +47,7 @@ const page = () => {
             backgroundImage: "url(assets/images/hero/hero-bg-dots.png)",
           }}
         >
-          <div className="container bordered-x">
+          <div className="container  ">
             <div className="hero-socials text-center">
               <img src="assets/images/hero/hero-social-shape.png" alt="Line" />
               <div className="logo">
@@ -254,7 +254,7 @@ const page = () => {
       {/* Tab Area End */}
       {/* Testimonials Area Start */}
       <section className="testimonials-area" id="testimonials">
-        <div className="container bordered-x bordered-top py-130 rpy-100">
+        <div className="container   bordered-top py-130 rpy-100">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9 col-md-11">
               <div
@@ -280,7 +280,7 @@ const page = () => {
       {/* Testimonials Area End */}
       {/* Featured Area Start */}
       <section className="featured-area bgc-black text-white">
-        <div className="container bordered-x bordered-bottom py-130 rpy-100">
+        <div className="container   bordered-bottom py-130 rpy-100">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9 col-md-11">
               <div
@@ -436,7 +436,7 @@ const page = () => {
       {/* Featured Area End */}
       {/* About Us Area start */}
       <section id="team" className="about-us-area bgc-black text-white">
-        <div className="container bordered-x py-130 rpy-100">
+        <div className="container   py-130 rpy-100">
           <div className="row gap-90 justify-content-between align-items-end">
             <div
               className="col-lg-6"
@@ -503,7 +503,7 @@ const page = () => {
       {/* Team Area start */}
       <section className="team-area bgc-black text-white">
         <div
-          className="container bordered-x pb-130 rpb-100 px-sm-0 bgp-bottom"
+          className="container   pb-130 rpb-100 px-sm-0 bgp-bottom"
           style={{
             backgroundImage: "url(assets/images/background/footer-bg-dots.png)",
           }}

@@ -48,7 +48,7 @@ const page = () => {
     <RiddaLayout>
       <PageBanner pageTitle="Team" pageName="Team Member" />
       <section className="team-page-about-area rel z-1">
-        <div className="container px-sm-0 bordered-x pt-130 rpt-100">
+        <div className="container px-sm-0   pt-130 rpt-100">
           <div className="row gap-50 align-items-center">
             <div
               className="col-lg-6 rmb-55"

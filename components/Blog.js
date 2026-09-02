@@ -7,7 +7,7 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("https://recreators.onrender.com/api/blog/getblog")
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/getblog`)
       .then((res) => res.json())
       .then((data) => {
         // ✅ Show only the first 3 blogs
@@ -18,7 +18,7 @@ const Blog = () => {
 
   return (
     <section className="blog-two-area rel z-1" id="blog">
-      <div className="container px-sm-0 bordered-x sm:pt-130 !pt-10 rpt-100">
+      <div className="container px-sm-0   sm:pt-130 !pt-10 rpt-100">
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-9">
             <div
@@ -49,7 +49,7 @@ const Blog = () => {
                   <p dangerouslySetInnerHTML={{ __html: blog.blogDetail.substring(0, 150) + "..." }} />
                 </div>
                 <div className="image">
-                  <img src={`https://recreators.onrender.com${blog.blogImg}`} alt={blog.blogName} />
+                  <img src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg}`} alt={blog.blogName} />
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ export const Blog2 = ({ subtitleColor = "color-primary" }) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("https://recreators.onrender.com/api/blog/getblog")
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/getblog`)
       .then((res) => res.json())
       .then((data) => {
         // ✅ Show only the first 3 blogs
@@ -111,19 +111,23 @@ export const Blog2 = ({ subtitleColor = "color-primary" }) => {
             >
               <div className="blog-item style-three">
                 <div className="image">
-                  <img src={`https://recreators.onrender.com${blog.blogImg}`} alt={blog.blogName} className="!w-100 !h-[300px]" />
+                  <img src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg}`} alt={blog.blogName} className="!w-100 !h-[300px]" />
                 </div>
                 <div className="content">
                   <ul className="blog-meta">
                     <li>
-                      <a href="#">{blog.category}</a>
+                      {blog.blogCategory}
                     </li>
                   </ul>
+                  
+                          
                   <h5>
-                    <p dangerouslySetInnerHTML={{ __html: blog.blogDetail.substring(0, 100) + "..." }} />
+                    <Link href={`/blogdetail/${blog.blogSlug}`}>
+                    <p dangerouslySetInnerHTML={{ __html: blog.blogName.substring(0, 100) + "..." }} />
+                    </Link>
                   </h5>
                   <Link
-                    href={`/blogs/${blog.blogSlug}`}
+                    href={`/blogdetail/${blog.blogSlug}`}
                     className="theme-btn style-two"
                   // data-hover="Read More"
                   >

@@ -42,7 +42,7 @@ export default function PaymentsPage() {
   const fetchPayments = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get("https://recreators.onrender.com/api/payment/get");
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/payment/get`);
       setPayments(data);
       // toast.success("Payments updated successfully");
     } catch (err) {

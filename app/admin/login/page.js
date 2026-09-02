@@ -20,7 +20,7 @@ export default function AdminLogin() {
 
     try {
       const res = await axios.post(
-         "https://recreators.onrender.com/api/users/admin-login",
+         `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/users/admin-login`,
         { email, password }
       );
 

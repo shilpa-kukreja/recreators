@@ -10,7 +10,7 @@ const Page = () => {
   const [blogsItems, setBlogItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://recreators.onrender.com/api/blog/getblog") // adjust URL when deployed
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/getblog`) // adjust URL when deployed
       .then((res) => res.json())
       .then((data) => setBlogItems(data))
       .catch((err) => console.error("Error fetching blogs:", err));
@@ -20,7 +20,7 @@ const Page = () => {
     <RiddaLayout>
       <PageBanner pageTitle="Blog" pageName="Blog Grid" />
       <section className="blog-grid-page rel z-1">
-        <div className="container bordered-x px-sm-0 sm:py-130 !py-10 rpy-100">
+        <div className="container   px-sm-0 sm:py-130 !py-10 rpy-100">
           <div className="row">
             <div className="col-lg-8">
               <div className="row">
@@ -35,12 +35,12 @@ const Page = () => {
                   >
                     <div className="blog-item style-three">
                       <div className="image">
-                        <img src={`https://recreators.onrender.com${blog.blogImg}`} alt={blog.blogName} />
+                        <img src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${blog.blogImg}`} alt={blog.blogName} />
                       </div>
                       <div className="content">
                         <ul className="blog-meta">
                           <li>
-                            <a href="#">{blog.blogCategory}</a>
+                            {blog.blogCategory}
                           </li>
                         </ul>
                         <h5>
@@ -106,7 +106,7 @@ export default Page;
 //   return (
 //     <RiddaLayout>
 //       <section className="page-banner-area bgc-black text-white rel z-1 overflow-hidden">
-//         <div className="container bordered-x pt-200 rpy-100 pb-140">
+//         <div className="container   pt-200 rpy-100 pb-140">
 //           <div className="banner-inner px-xl-5 pt-90">
 //             <div
 //               className="text-center section-title mb-35"
@@ -155,7 +155,7 @@ export default Page;
 //       </section>
 
 //       <section className="blog-details-page rel z-1">
-//         <div className="container bordered-x px-sm-0 py-130 rpy-100">
+//         <div className="container   px-sm-0 py-130 rpy-100">
 //           <div className="row">
 //             <div className="col-lg-8">
 //               <div className="blog-details-content">

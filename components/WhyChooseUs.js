@@ -7,7 +7,7 @@ const WhyChooseUs = () => {
   return (
     <section className="tab-area bgc-lighter-gradient" id="why-choose">
       <div
-        className="container bordered-x py-130 rpy-100 bgp-bottom"
+        className="container   py-130 rpy-100 bgp-bottom"
         style={{
           backgroundImage: "url(assets/images/background/tab-bg-dots.png)",
         }}
@@ -224,7 +224,7 @@ export const WhyChooseUs2 = ({ bg = "bgc-lighter" }) => {
 
   return (
     <section className={`why-choose-us ral z-1 ${bg}`}>
-      <div className="container bordered-x sm:py-100 !py-10">
+      <div className="container   sm:py-100 !py-10">
         <div className="row mx-xl-1 justify-content-between">
           <div
             className="col-lg-6 rmb-55"
@@ -291,7 +291,7 @@ export const WhyChooseUs3 = ({ className = "why-choose-two-area" }) => {
 
   return (
     <section className={`rel z-1 ${className}`}>
-      <div className="container bordered-x sm:pt-130 !pt-10 rpt-100 pb-100 rpb-70 px-sm-0">
+      <div className="container   sm:pt-130 !pt-10 rpt-100 pb-100 rpb-70 px-sm-0">
         <div className="row justify-content-center pb-35">
           <div
             className="col-xl-5 col-lg-7 col-md-10 text-center"
