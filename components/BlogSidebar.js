@@ -44,7 +44,7 @@ const BlogSidebar = () => {
         </div>
 
         {/* 📂 Categories */}
-        <div className="widget widget-category !bg-white !shadow-md !rounded-2xl !p-6 !border !border-gray-100">
+        {/* <div className="widget widget-category !bg-white !shadow-md !rounded-2xl !p-6 !border !border-gray-100">
           <h4 className="widget-title !text-xl !font-semibold !mb-4 !text-gray-800 !border-b !pb-2">
             Categories
           </h4>
@@ -63,7 +63,7 @@ const BlogSidebar = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {/* 📰 Recent News */}
         <div className="widget widget-news">

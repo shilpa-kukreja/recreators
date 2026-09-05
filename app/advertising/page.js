@@ -103,7 +103,7 @@ const services = [
               <Link
                 href="about"
                 className="theme-btn hover-primary mt-25"
-                data-hover="Learn More Us"
+              
               >
                 <span>Learn More Us</span>
               </Link>
@@ -132,15 +132,11 @@ const services = [
                       <img src={blog.image} alt={blog.title} />
                     </div>
                     <div className="content">
-                      <ul className="blog-meta">
-                        <li>
-                          <a href="#">{blog.title}</a>
-                        </li>
-                      </ul>
+                     
                       <h5>
-                        <Link href={`/service/${index + 1}`}>
+                  
                           {blog.title}
-                        </Link>
+                      
                       </h5>
                       <p>{blog.description}</p>
                       {/* <Link
@@ -190,7 +186,7 @@ const services = [
       </div>
     </section>
       {/* <Services2 extraClass="bgc-black text-white" /> */}
-      <WhyChooseUs3 />
+      {/* <WhyChooseUs3 /> */}
       <Faq2 />
     </RiddaLayout>
   );

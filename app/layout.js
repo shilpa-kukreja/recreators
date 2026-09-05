@@ -9,6 +9,8 @@ import "@css/slick.min.css";
 import "@css/style.css";
 import ToastProvider from "@/components/ToastProvider";
 import { AppContextProvider } from "@/app/context/AppContext";
+import { ToastContainer } from "react-toastify";
+
 
 
 export const metadata = {
@@ -24,6 +26,8 @@ export default function RootLayout({ children }) {
         {children}
         <ToastProvider /> 
         </AppContextProvider>
+        <ToastContainer />
+
        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       </body>
     </html>

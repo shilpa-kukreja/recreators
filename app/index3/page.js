@@ -177,7 +177,7 @@ const page = () => {
                 <Link
                   href="about"
                   className="theme-btn color-white hover-secondary mt-25"
-                  data-hover="Learn More Us"
+                  data-hover="Learn More Us
                 >
                   <span>Learn More Us</span>
                 </Link>

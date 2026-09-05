@@ -113,7 +113,6 @@
 // };
 // export default page;
 
-
 "use client";
 import { useEffect, useState } from "react";
 import PageBanner from "@/components/PageBanner";
@@ -129,7 +128,9 @@ const Page = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/getportfolio`);
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/portfolio/getportfolio`,
+        );
         const data = await res.json();
 
         // ✅ Adjust based on backend response
@@ -141,7 +142,7 @@ const Page = () => {
           setAllProjects(data.data);
         } else {
           console.error("Unexpected API response:", data);
-          setAllProjects([]); 
+          setAllProjects([]);
         }
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -199,11 +200,18 @@ const Page = () => {
                             </a>
                           ))}
                       </div>
-                      <h4>
-                        <Link href={project.portfolioLink || "#"}>
+                      <h3>
+                    
                           {project.portfolioName}
-                        </Link>
-                      </h4>
+                        
+                      </h3>
+
+                      <div
+                        className="!text-xl !text-gray-600 !mt-2"
+                        dangerouslySetInnerHTML={{
+                          __html: project.portfolioDetail,
+                        }}
+                      />
                       <p className="!text-sm !text-gray-500 !mt-2">
                         {new Date(project.portfolioDate).toLocaleDateString()}
                       </p>

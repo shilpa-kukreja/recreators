@@ -60,10 +60,10 @@ const Services = ({ extraClass = "" }) => {
           </div>
         </div>
         {services.map(({ id, image, title }) => (
-          <div key={id} className="service-limeline-item">
+          <div key={id} className="service-limeline-item gap-8">
             <span className="number">{id < 10 ? `0${id}` : id}</span>
-            <span className="h1">
-              <Link href="service-details">{title}</Link>
+            <span className="pl-10">
+              <h2 className="pl-10"><Link href="service-details">{title}</Link></h2>
             </span>
             <div className="image">
               <img src={image} alt="Service" />

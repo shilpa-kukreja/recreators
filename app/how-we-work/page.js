@@ -242,29 +242,68 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 
-import React from "react";
+import {React, useState} from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Clock, Search, BarChart2, Settings2, TrendingUp, Target, Zap, Users, BarChart3 } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Search,
+  BarChart2,
+  Settings2,
+  TrendingUp,
+  Target,
+  Zap,
+  Users,
+  BarChart3,
+} from "lucide-react";
 import RiddaLayout from "@/layout/RiddaLayout";
 import PageBanner from "@/components/PageBanner";
 
 export default function HowWeWork() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) {
+      setMessage("Please enter your email");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/subscriber/addsubscriber`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        },
+      );
+
+      const data = await response.json();
+      if (response.ok) {
+        setMessage("✅ Subscribed successfully!");
+        setEmail("");
+      } else {
+        setMessage(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      setMessage("⚠️ Server error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const steps = [
     {
       id: 1,
@@ -272,7 +311,7 @@ export default function HowWeWork() {
       desc: "We begin by deeply understanding your brand, goals, audience, and competitors to uncover key insights and untapped opportunities.",
       icon: <Search size={24} />,
       color: "!bg-indigo-500",
-      gradient: "from-indigo-500 to-violet-600"
+      gradient: "from-indigo-500 to-violet-600",
     },
     {
       id: 2,
@@ -280,7 +319,7 @@ export default function HowWeWork() {
       desc: " We craft a clear strategy that aligns with your objectives, defining your tone, messaging, and digital direction for consistent impact.",
       icon: <Settings2 size={24} />,
       color: "!bg-rose-500",
-      gradient: "from-rose-500 to-pink-600"
+      gradient: "from-rose-500 to-pink-600",
     },
     {
       id: 3,
@@ -288,7 +327,7 @@ export default function HowWeWork() {
       desc: "Our creative experts transform strategy into captivating visuals, designs, and content that engage audiences and enhance brand presence.",
       icon: <Zap size={24} />,
       color: "!bg-emerald-500",
-      gradient: "from-emerald-500 to-teal-600"
+      gradient: "from-emerald-500 to-teal-600",
     },
     {
       id: 4,
@@ -296,7 +335,7 @@ export default function HowWeWork() {
       desc: " We bring your vision to life through seamless development, ensuring speed, functionality, and a flawless digital experience.",
       icon: <TrendingUp size={24} />,
       color: "!bg-amber-500",
-      gradient: "from-amber-500 to-orange-600"
+      gradient: "from-amber-500 to-orange-600",
     },
     {
       id: 5,
@@ -304,7 +343,7 @@ export default function HowWeWork() {
       desc: " From launch to optimization, we execute with precision and continuously refine for sustainable growth and maximum ROI.",
       icon: <BarChart2 size={24} />,
       color: "!bg-sky-500",
-      gradient: "from-sky-500 to-blue-600"
+      gradient: "from-sky-500 to-blue-600",
     },
   ];
 
@@ -326,13 +365,19 @@ export default function HowWeWork() {
                 <Target size={16} />
                 <span>Proven Process</span>
               </div>
-              
+
               <h1 className="!text-4xl md:!text-5xl !font-bold !leading-tight !text-gray-900">
-                Turning Vision Into Measurable Growth <span className="!text-transparent !bg-clip-text !bg-gradient-to-r from-yellow-500 to-orange-500">Approach</span>
+                Turning Vision Into Measurable Growth{" "}
+                <span className="!text-transparent !bg-clip-text !bg-gradient-to-r from-yellow-500 to-orange-500">
+                  Approach
+                </span>
               </h1>
-              
+
               <p className="!mt-6 !text-lg !text-gray-600 !max-w-xl !leading-relaxed">
-               Our process blends creativity, strategy, and analytics to deliver outcomes that elevate brands. Every project follows a proven, transparent structure focused on results and collaboration.
+                Our process blends creativity, strategy, and analytics to
+                deliver outcomes that elevate brands. Every project follows a
+                proven, transparent structure focused on results and
+                collaboration.
               </p>
 
               <div className="!mt-10 !flex !flex-wrap !gap-4">
@@ -357,9 +402,21 @@ export default function HowWeWork() {
               </div>
 
               <div className="!mt-12 !grid !grid-cols-3 !gap-6">
-                <Stat label="Avg. ROI" value="4.2x" icon={<BarChart3 className="!text-indigo-600" />} />
-                <Stat label="Avg. CTR" value="2.8%" icon={<TrendingUp className="!text-rose-600" />} />
-                <Stat label="Growth" value="+38% MoM" icon={<Zap className="!text-amber-600" />} />
+                <Stat
+                  label="Avg. ROI"
+                  value="4.2x"
+                  icon={<BarChart3 className="!text-indigo-600" />}
+                />
+                <Stat
+                  label="Avg. CTR"
+                  value="2.8%"
+                  icon={<TrendingUp className="!text-rose-600" />}
+                />
+                <Stat
+                  label="Growth"
+                  value="+38% MoM"
+                  icon={<Zap className="!text-amber-600" />}
+                />
               </div>
             </div>
 
@@ -392,17 +449,19 @@ export default function HowWeWork() {
                 viewport={{ once: true }}
                 className="!text-4xl !font-bold !text-gray-900 !mb-4"
               >
-                Our <span className="!text-yellow-600">5-Step</span> Process to Success
+                Our <span className="!text-yellow-600">5-Step</span> Process to
+                Success
               </motion.h2>
               <p className="!text-gray-600 !text-lg">
-                A structured approach that ensures clarity, efficiency, and measurable results for every project.
+                A structured approach that ensures clarity, efficiency, and
+                measurable results for every project.
               </p>
             </div>
 
             <div className="!relative">
               {/* Connecting line */}
               <div className="!absolute !left-8 !top-0 !bottom-0 !w-1 !bg-gradient-to-b from-yellow-500 via-orange-500 to-red-500 !hidden lg:!block !ml-4"></div>
-              
+
               <div className="!grid !gap-16  lg:!gap-8">
                 {steps.map((s, idx) => (
                   <StepCard key={s.id} step={s} index={idx + 1} />
@@ -429,24 +488,24 @@ export default function HowWeWork() {
             </div>
 
             <div className="!grid !grid-cols-1 sm:!grid-cols-2 lg:!grid-cols-4 !gap-6">
-              <Deliverable 
-                title="Strong Brand Identity" 
-                desc="A brand that connects emotionally, communicates purpose clearly, and stands apart from the competition." 
+              <Deliverable
+                title="Strong Brand Identity"
+                desc="A brand that connects emotionally, communicates purpose clearly, and stands apart from the competition."
                 icon={<Search className="!text-indigo-600" />}
               />
-              <Deliverable 
-                title="Digital Visibility" 
-                desc="Campaigns and designs that not only attract attention but also convert audiences into loyal customers." 
+              <Deliverable
+                title="Digital Visibility"
+                desc="Campaigns and designs that not only attract attention but also convert audiences into loyal customers."
                 icon={<Users className="!text-rose-600" />}
               />
-              <Deliverable 
-                title="Actionable Insights" 
-                desc=" Detailed analytics that help you make smarter marketing decisions and track real performance growth." 
+              <Deliverable
+                title="Actionable Insights"
+                desc=" Detailed analytics that help you make smarter marketing decisions and track real performance growth."
                 icon={<Zap className="!text-amber-600" />}
               />
-              <Deliverable 
-                title="Lasting Growth" 
-                desc=" Continuous optimization and long-term strategies that ensure steady, scalable progress for your brand" 
+              <Deliverable
+                title="Lasting Growth"
+                desc=" Continuous optimization and long-term strategies that ensure steady, scalable progress for your brand"
                 icon={<BarChart2 className="!text-sky-600" />}
               />
             </div>
@@ -463,21 +522,28 @@ export default function HowWeWork() {
           >
             <div className="!absolute -!right-10 -!top-10 !w-40 !h-40 !bg-white/10 !rounded-full"></div>
             <div className="!absolute -!left-10 -!bottom-10 !w-40 !h-40 !bg-white/10 !rounded-full"></div>
-            
+
             <div className="!flex !flex-col md:!flex-row !items-center !justify-between !gap-8 !relative !z-10">
               <div className="!text-white !max-w-md">
-                <h4 className="!text-3xl !font-bold !mb-4">Ready to Accelerate Growth?</h4>
+                <h4 className="!text-3xl !font-bold !mb-4">
+                  Ready to Accelerate Growth?
+                </h4>
                 <p className="!text-indigo-100">
-                  Book a free 30-minute strategy call with our experts and discover your next 90-day growth roadmap.
+                  Book a free 30-minute strategy call with our experts and
+                  discover your next 90-day growth roadmap.
                 </p>
               </div>
 
-              <form className="!flex !flex-col sm:!flex-row !gap-4 !w-full md:!w-auto">
+              <form
+                onSubmit={handleSubmit}
+                className="!flex !flex-col sm:!flex-row !gap-4 !w-full md:!w-auto"
+              >
                 <input
-                  aria-label="email"
                   type="email"
                   required
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="!flex-1 !px-5 !py-3 !rounded-xl !border !border-white/20 !bg-white/10 !text-white placeholder:!text-indigo-200 focus:!ring-2 focus:!ring-white/30 !outline-none"
                 />
 
@@ -485,11 +551,18 @@ export default function HowWeWork() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="!inline-flex !items-center !justify-center !gap-2 !bg-white !text-indigo-600 !font-medium !px-6 !py-3 !rounded-xl hover:!shadow-lg !transition-shadow"
+                  disabled={loading}
+                  className="!inline-flex !items-center !justify-center !gap-2 !bg-white !text-indigo-600 !font-medium !px-6 !py-3 !rounded-xl hover:!shadow-lg !transition-shadow disabled:!opacity-50"
                 >
-                  Schedule Call
+                  {loading ? "Subscribing..." : "Schedule Call"}
                 </motion.button>
               </form>
+
+              {message && (
+                <p className="!text-white !mt-4 !text-sm !font-medium">
+                  {message}
+                </p>
+              )}
             </div>
           </motion.section>
         </section>
@@ -526,22 +599,28 @@ function StepCard({ step, index }) {
       className="!flex !flex-col md:!flex-row !items-start !gap-8 !relative !group"
     >
       <div className="!flex !items-center !justify-center !flex-shrink-0 !relative">
-        <div className={`!flex !h-16 !w-16 !items-center !justify-center !rounded-2xl !text-white ${step.color} !shadow-lg !relative !z-10`}>
+        <div
+          className={`!flex !h-16 !w-16 !items-center !justify-center !rounded-2xl !text-white ${step.color} !shadow-lg !relative !z-10`}
+        >
           {step.icon}
         </div>
-        <div className={`!absolute !inset-0 !rounded-2xl !bg-gradient-to-r ${step.gradient} !opacity-0 group-hover:!opacity-100 !blur-lg !transition-opacity !duration-300`}></div>
+        <div
+          className={`!absolute !inset-0 !rounded-2xl !bg-gradient-to-r ${step.gradient} !opacity-0 group-hover:!opacity-100 !blur-lg !transition-opacity !duration-300`}
+        ></div>
         <div className="!absolute -!left-4 !top-0 !bottom-0 !flex !items-center md:!hidden">
           <div className="!h-8 !w-1 !bg-gray-200"></div>
         </div>
       </div>
-      
+
       <div className="!flex-1 step-card !bg-white hover:!bg-gradient-to-r hover:!from-gray-800 hover:!to-black !rounded-2xl hover:!text-white !p-8 !shadow-md hover:!shadow-lg !transition-shadow">
         <div className="!inline-flex !items-center !gap-2 !bg-gray-100 !text-gray-700 !px-3 !py-1 !rounded-full !text-xs !font-medium !mb-4">
           <div className="!h-2 !w-2 !rounded-full !bg-indigo-500"></div>
           <span>Step {index}</span>
         </div>
-        
-        <h4 className="!text-xl !font-semibold text-gray-900  !mb-3">{step.title}</h4>
+
+        <h4 className="!text-xl !font-semibold text-gray-900  !mb-3">
+          {step.title}
+        </h4>
         <p className="text-gray-600  !leading-relaxed">{step.desc}</p>
       </div>
     </motion.div>
@@ -560,7 +639,9 @@ function Deliverable({ title, desc, icon }) {
       <div className="!flex !items-center !justify-center !h-12 !w-12 !rounded-xl !bg-gray-100 !mb-4 group-hover:!scale-110 !transition-transform">
         {icon}
       </div>
-      <div className="!text-lg !font-semibold !text-gray-900 !mb-2">{title}</div>
+      <div className="!text-lg !font-semibold !text-gray-900 !mb-2">
+        {title}
+      </div>
       <div className="!text-sm !text-gray-600">{desc}</div>
     </motion.div>
   );

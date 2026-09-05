@@ -103,7 +103,7 @@ const services = [
               <Link
                 href="about"
                 className="theme-btn hover-primary mt-25"
-                data-hover="Learn More Us"
+                
               >
                 <span>Learn More Us</span>
               </Link>
@@ -133,14 +133,12 @@ const services = [
                     </div>
                     <div className="content">
                       <ul className="blog-meta">
-                        <li>
-                          <a href="#">{blog.title}</a>
-                        </li>
+                       
                       </ul>
                       <h5>
-                        <Link href={`/service/${index + 1}`}>
+                        
                           {blog.title}
-                        </Link>
+                        
                       </h5>
                       <p>{blog.description}</p>
                       {/* <Link

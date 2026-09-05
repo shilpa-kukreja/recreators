@@ -103,7 +103,7 @@ const services = [
               <Link
                 href="about"
                 className="theme-btn hover-primary mt-25"
-                data-hover="Learn More Us"
+                data-hover="Learn More U
               >
                 <span>Learn More Us</span>
               </Link>

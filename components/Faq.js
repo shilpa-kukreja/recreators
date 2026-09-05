@@ -248,7 +248,7 @@ export const Faq2 = () => {
             <Link
               href="contact"
               className="theme-btn style-two mt-15"
-              data-hover="Get A Quote"
+      
             >
               <span>Get A Quote</span>
             </Link>

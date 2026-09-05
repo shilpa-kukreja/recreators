@@ -41,7 +41,7 @@ const Blog = () => {
             </span>
             <div className="content">
               <h4>
-                <Link href={`/blog/${blog.blogSlug}`}>{blog.blogName}</Link>
+                <Link href={`/blogdetail/${blog.blogSlug}`}>{blog.blogName}</Link>
               </h4>
               <div className="hover-content">
                 <div className="text">

@@ -13,9 +13,9 @@ const CounterItems = () => {
     >
       <div className="row">
         {[
-          { end: 500, title: "Creative Projects Delivered" , text: "Branding, packaging, web, and marketing campaigns tailored to every client’s story." },
-          { end: 350, title: "Happy Clients" , text: "Businesses that trust us to bring their ideas to life with design and strategy."},
-          { end: 4, title: "Years of Excellence", text: "Since 2020, blending creativity and technology to fuel business growth." },
+          { end: 500, title: "Creative Projects Delivered" , text: "Packaging Designs Delivered Every pack engineered to sell before a word is read." },
+          { end: 350, title: "Happy Clients" , text: "Happy Clients Brands that trust us as their one-stop design & growth partner."},
+          { end: 5, title: "Years of Excellence", text: "Years of Excellence Since 2020, blending creativity, packaging expertise, and strategy to fuel business growth." },
         ].map(({ end, title , text}, i) => (
           <div key={i} className="col-md-4 col-sm-6">
             <div className="counter-item counter-text-wrap">

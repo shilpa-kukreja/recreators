@@ -116,17 +116,17 @@ export default function ServicesSection() {
               <h3 className="!text-xl !font-semibold !text-gray-900 !mb-3">
                 {service.title}
               </h3>
-              <p className="!text-gray-600 !mb-4 !leading-relaxed">
+              <p className="!text-gray-600  !leading-relaxed">
                 {service.description}
               </p>
               
-              <a
+              {/* <a
                 href="#"
                 className="!inline-flex !items-center !text-sm !font-medium !text-yellow-500 hover:!text-yellow-600 !transition-colors !duration-300 group-hover:!translate-x-1"
               >
                 Learn more
                 <FiArrowRight className="!ml-1 group-hover:!translate-x-1 !transition-transform !duration-300" />
-              </a>
+              </a> */}
               
               {/* Subtle background pattern on hover */}
               <div className="!absolute !inset-0 -!z-10 !opacity-0 group-hover:!opacity-5 !transition-opacity !duration-300 !bg-gradient-to-br from-indigo-500 to-purple-500"></div>
@@ -135,7 +135,7 @@ export default function ServicesSection() {
         </div>
         
         {/* CTA Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
@@ -149,7 +149,7 @@ export default function ServicesSection() {
             Explore all services
             <FiArrowRight className="!ml-2" />
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

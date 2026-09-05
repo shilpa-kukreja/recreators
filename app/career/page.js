@@ -906,6 +906,8 @@ import {
   Building2, Rocket, Globe, Shield, Coffee, Palette,
   TrendingUp, BookOpen, Video, MessageCircle
 } from "lucide-react";
+import { toast } from "react-toastify";
+
 import RiddaLayout from "@/layout/RiddaLayout";
 import PageBanner from "@/components/PageBanner";
 

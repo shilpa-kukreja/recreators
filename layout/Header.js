@@ -1325,8 +1325,15 @@ const Header1 = () => {
       title: "Packaging", href: "/packaging",
       icon: "📦",
       links: [
-        { text: "Packaging Design", href: "/packaging-design" },
-        { text: "Product Shape Design", href: "/product-shape-design" },
+        { text: "Flexible Packaging", href: "/packaging-design" },
+        { text: "Rigid & Folding Packaging", href: "/product-shape-design" },
+        { text: "Jars, Bottles & Containers", href: "/product-shape-design" },
+        { text: "Labels & Stickers", href: "/product-shape-design" },
+        { text: "E-Commerce & Shipping Packaging", href: "/product-shape-design" },
+        
+        { text: "Specialty & Gifting Packaging", href: "/product-shape-design" },
+        { text: "Industry-Specific Packaging", href: "/product-shape-design" },
+        { text: "FMCG", href: "/product-shape-design" },
 
       ],
     },
@@ -1387,7 +1394,7 @@ const Header1 = () => {
       links: [
 
         { text: "WordPress Development", href: "/word-press-development" },
-        { text: "PHP Development", href: "/php-development" },
+        // { text: "PHP Development", href: "/php-development" },
         { text: "React.js / Next.js Development", href: "/react-js-next-js-development" },
         { text: "Custom Web Development", href: "/custom-web-development" },
         { text: "Web Portal Development", href: "/web-portal-development" },

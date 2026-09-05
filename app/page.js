@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 import ServicesSection from "@/components/service";
 import Services from "@/components/Services";
 import ClientSlider from "@/components/sliders/ClientSlider";
-import { TestimonialSlider1, } from "@/components/sliders/TestimonialSlider";
+import { TestimonialSlider1 } from "@/components/sliders/TestimonialSlider";
 import RiddaLayout from "@/layout/RiddaLayout";
 import Link from "next/link";
 
@@ -23,11 +23,20 @@ const page = () => {
                 data-aos-duration={1500}
                 data-aos-offset={50}
               >
-                <h1 className="sm:!text-8xl !text-5xl line-clamp-6">Design
-                  <br />Strategy
-                  <br />Growth</h1>
+                <h1 className="sm:!text-8xl !text-5xl line-clamp-6">
+                  Ideas
+                  <br />
+                  Identity
+                  <br />
+                  Impact
+                </h1>
                 <p className="!text-xl !text-justify">
-                  At Recreators Design & Media, we don’t just make things look good — we make them perform for your business. From impactful branding and packaging to high-performance e-commerce and social media strategies, we help brands across India stand out, connect, and grow.
+                  ReCreators is the digital marketing agency for brands who
+                  refuse to be forgettable. Packaging that stops the scroll.
+                  Branding people actually remember. Websites and campaigns
+                  engineered to convert not just exist. We don't build noise. We
+                  build main characters, wherever in the world you're trying to
+                  be seen.{" "}
                 </p>
                 <Link
                   href="/project-grid"
@@ -183,11 +192,16 @@ const page = () => {
                 <div className="section-title mb-40">
                   <span className="subtitle mt-10 mb-15">About Agency</span>
                   <h2>
-                    We Don’t Just Design Brands, We <span> Build </span> Legacies
+                    We Don’t Just Design Brands, We <span> Build </span>{" "}
+                    Legacies
                   </h2>
                 </div>
                 <p>
-                  At Recreators Design & Media, we believe every brand has a story worth telling. Since 2020, our team has blended creativity with strategy to craft designs that inspire and marketing that delivers. With every project, we help businesses stand out, connect deeply, and grow fearlessly.
+                  At Recreators Design & Media, we believe every brand has a
+                  story worth telling. Since 2020, our team has blended
+                  creativity with strategy to craft designs that inspire and
+                  marketing that delivers. With every project, we help
+                  businesses stand out, connect deeply, and grow fearlessly.
                 </p>
                 <ul className="list-style-one my-30">
                   <li>Branding & Packaging</li>
@@ -198,7 +212,7 @@ const page = () => {
                 <Link
                   href="/project-list"
                   className="theme-btn style-two"
-                // data-hover="Explore Our Projects"
+                  // data-hover="Explore Our Projects"
                 >
                   <span>Explore Our Projects</span>
                 </Link>
@@ -226,7 +240,9 @@ const page = () => {
                 data-aos-duration={1500}
                 data-aos-offset={50}
               >
-                <span className="subtitle mt-10 sm:!mb-15 !mb-5">How IT Works</span>
+                <span className="subtitle mt-10 sm:!mb-15 !mb-5">
+                  How IT Works
+                </span>
                 <h2>Step by Step Working Process</h2>
               </div>
             </div>
@@ -252,7 +268,8 @@ const page = () => {
                     <br /> Define
                   </h5>
                   <p>
-                    We uncover your goals, audience, and vision to set a strong foundation.
+                    We uncover your goals, audience, and vision to set a strong
+                    foundation.
                   </p>
                 </div>
               </div>
@@ -270,7 +287,8 @@ const page = () => {
                     <br /> Develop
                   </h5>
                   <p>
-                    Creative strategy meets design to craft tailored solutions for your brand.
+                    Creative strategy meets design to craft tailored solutions
+                    for your brand.
                   </p>
                 </div>
                 <div className="circle" />
@@ -299,10 +317,11 @@ const page = () => {
                 <div className="content">
                   <h5>
                     Refine
-                    <br /> and  Collaborate
+                    <br /> and Collaborate
                   </h5>
                   <p>
-                    Your feedback guides us as we fine-tune every detail to perfection.
+                    Your feedback guides us as we fine-tune every detail to
+                    perfection.
                   </p>
                 </div>
               </div>
@@ -320,7 +339,8 @@ const page = () => {
                     <br /> Grow
                   </h5>
                   <p>
-                    We execute with impact, scaling strategies that fuel lasting growth.
+                    We execute with impact, scaling strategies that fuel lasting
+                    growth.
                   </p>
                 </div>
                 <div className="circle" />
@@ -373,10 +393,7 @@ const page = () => {
                   href="assets/images/projects/project-image1.jpg"
                   className="image"
                 >
-                  <img
-                    src="assets/images/projects/Group1.png"
-                    alt="Project"
-                  />
+                  <img src="assets/images/projects/Group1.png" alt="Project" />
                 </a>
                 <div className="content">
                   <span className="category">Marketing</span>
@@ -397,10 +414,7 @@ const page = () => {
                   href="assets/images/projects/project-image2.jpg"
                   className="image"
                 >
-                  <img
-                    src="assets/images/projects/Group2.png"
-                    alt="Project"
-                  />
+                  <img src="assets/images/projects/Group2.png" alt="Project" />
                 </a>
                 <div className="content">
                   <span className="category">Marketing</span>
@@ -421,10 +435,7 @@ const page = () => {
                   href="assets/images/projects/project-image2.jpg"
                   className="image"
                 >
-                  <img
-                    src="assets/images/projects/Group3.png"
-                    alt="Project"
-                  />
+                  <img src="assets/images/projects/Group3.png" alt="Project" />
                 </a>
                 <div className="content">
                   <span className="category">Marketing</span>
@@ -445,10 +456,7 @@ const page = () => {
                   href="assets/images/projects/project-image4.jpg"
                   className="image"
                 >
-                  <img
-                    src="assets/images/projects/Group4.png"
-                    alt="Project"
-                  />
+                  <img src="assets/images/projects/Group4.png" alt="Project" />
                 </a>
                 <div className="content">
                   <span className="category">Marketing</span>
@@ -469,10 +477,7 @@ const page = () => {
                   href="assets/images/projects/project-image5.jpg"
                   className="image"
                 >
-                  <img
-                    src="assets/images/projects/Group5.png"
-                    alt="Project"
-                  />
+                  <img src="assets/images/projects/Group5.png" alt="Project" />
                 </a>
                 <div className="content">
                   <span className="category">Marketing</span>
@@ -493,10 +498,7 @@ const page = () => {
                   href="assets/images/projects/project-image6.jpg"
                   className="image"
                 >
-                  <img
-                    src="assets/images/projects/Group1.png"
-                    alt="Project"
-                  />
+                  <img src="assets/images/projects/Group1.png" alt="Project" />
                 </a>
                 <div className="content">
                   <span className="category">Marketing</span>
@@ -510,7 +512,7 @@ const page = () => {
               <Link
                 href="project-grid"
                 className="theme-btn style-two mt-20"
-              // data-hover="Explore Projects"
+                // data-hover="Explore Projects"
               >
                 <span>Explore Projects</span>
               </Link>
@@ -546,7 +548,6 @@ const page = () => {
               </div>
               <div className="col-lg-7">
                 <TestimonialSlider1 />
-
               </div>
             </div>
             <div
