@@ -1,12 +1,12 @@
 import { Faq2 } from "@/components/Faq";
 import PageBanner from "@/components/PageBanner";
-import Services, { Services2 } from "@/components/Services";
 import { WhyChooseUs3 } from "@/components/WhyChooseUs";
 import WorkingProcess from "@/components/WorkingProcess";
 import RiddaLayout from "@/layout/RiddaLayout";
 import Link from "next/link";
+
 const page = () => {
-const services = [
+  const services = [
     {
       title: "Branding & Identity",
       description:
@@ -57,12 +57,15 @@ const services = [
     },
   ];
 
-  
   return (
     <RiddaLayout>
+      {/* Page Banner Start */}
       <PageBanner pageTitle="Service" pageName="Service_01" />
+      {/* Page Banner End */}
+
+      {/* What We Provide Area Start */}
       <section className="what-we-provide-area rel z-1">
-        <div className="container px-sm-0   py-130 rpy-100">
+        <div className="container px-sm-0 py-130 rpy-100">
           <div className="row justify-content-between">
             <div
               className="col-lg-6 rmb-55"
@@ -71,17 +74,22 @@ const services = [
               data-aos-offset={50}
             >
               <div className="section-title mb-50">
-                <span className="subtitle mt-10 mb-15">What We Provide</span>
+                <span className="subtitle mt-10 mb-15">
+                  What We Provide
+                </span>
+
                 <h2>
                   The Complete Suite of Services We Provide for Your Online
                   Success
                 </h2>
               </div>
+
               <img
-                src="assets/images/about/what-we-provide.jpg"
+                src="/assets/images/about/what-we-provide.jpg"
                 alt="What We Provide"
               />
             </div>
+
             <div
               className="col-lg-6"
               data-aos="fade-right"
@@ -90,109 +98,134 @@ const services = [
             >
               <div className="image mb-40">
                 <img
-                  src="assets/images/about/what-we-provide2.jpg"
+                  src="/assets/images/about/what-we-provide2.jpg"
                   alt="What We Provide"
                 />
               </div>
+
               <p>
-                Understanding your marketing videos’ performance can be like
-                looking for needle in a haystack. Vidyard’s online video
-                marketing platform is a magnet We'll discuss your project needs,
-                goals, and budget, and provide
+                Understanding your marketing performance can be like looking
+                for a needle in a haystack. We combine strategy, creativity,
+                technology, and data-driven insights to build powerful digital
+                experiences that support your business goals.
               </p>
+
               <Link
-                href="about"
+                href="/about"
                 className="theme-btn hover-primary mt-25"
-                data-hover="Learn More 
+                data-hover="Learn More"
               >
-                <span>Learn More Us</span>
+                <span>Learn More</span>
               </Link>
             </div>
           </div>
         </div>
       </section>
+      {/* What We Provide Area End */}
+
+      {/* Working Process Area Start */}
       <WorkingProcess titleColor="" />
-       <section className="blog-grid-page !w-full rel z-1">
-      <div className="container   px-sm-0 py-130 rpy-100">
-        <div className="row">
-          {/* ===== Left Section (Blogs) ===== */}
-          <div className="">
-            <div className="row">
-              {services.map((blog, index) => (
-                <div
-                  className="col-md-6"
-                  key={index}
-                  data-aos="fade-up"
-                  data-aos-duration={1500}
-                  data-aos-offset={50}
-                  data-aos-delay={index * 50}
-                >
-                  <div className="blog-item style-three">
-                    <div className="image">
-                      <img src={blog.image} alt={blog.title} />
-                    </div>
-                    <div className="content">
-                      <ul className="blog-meta">
-                        <li>
-                          <a href="#">{blog.title}</a>
-                        </li>
-                      </ul>
-                      <h5>
-                        <Link href={`/service/${index + 1}`}>
-                          {blog.title}
+      {/* Working Process Area End */}
+
+      {/* Services Area Start */}
+      <section className="blog-grid-page !w-full rel z-1">
+        <div className="container px-sm-0 py-130 rpy-100">
+          <div className="row">
+            {/* Services Grid */}
+            <div className="col-12">
+              <div className="row">
+                {services.map((service, index) => (
+                  <div
+                    className="col-md-6"
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-duration={1500}
+                    data-aos-offset={50}
+                    data-aos-delay={index * 50}
+                  >
+                    <div className="blog-item style-three">
+                      <div className="image">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                        />
+                      </div>
+
+                      <div className="content">
+                        <ul className="blog-meta">
+                          <li>
+                            <Link href={`/service/${index + 1}`}>
+                              {service.title}
+                            </Link>
+                          </li>
+                        </ul>
+
+                        <h5>
+                          <Link href={`/service/${index + 1}`}>
+                            {service.title}
+                          </Link>
+                        </h5>
+
+                        <p>{service.description}</p>
+
+                        <Link
+                          href={`/service/${index + 1}`}
+                          className="theme-btn style-two"
+                        >
+                          <span>Read More</span>
                         </Link>
-                      </h5>
-                      <p>{blog.description}</p>
-                      <Link
-                        href={`/service/${index + 1}`}
-                        className="theme-btn style-two"
-                      >
-                        <span>Read More</span>
-                      </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Pagination */}
+              <ul
+                className="pagination pt-5 flex-wrap"
+                data-aos="fade-up"
+                data-aos-duration={1500}
+                data-aos-offset={50}
+              >
+                <li className="page-item active">
+                  <span className="page-link">
+                    1<span className="sr-only">(current)</span>
+                  </span>
+                </li>
+
+                <li className="page-item">
+                  <a className="page-link" href="#">
+                    2
+                  </a>
+                </li>
+
+                <li className="page-item">
+                  <a className="page-link" href="#">
+                    3
+                  </a>
+                </li>
+
+                <li className="page-item">
+                  <a className="page-link" href="#">
+                    Next <i className="far fa-chevron-right" />
+                  </a>
+                </li>
+              </ul>
             </div>
-
-            {/* ===== Pagination (Static) ===== */}
-            <ul
-              className="pagination pt-5 flex-wrap"
-              data-aos="fade-up"
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
-              <li className="page-item active">
-                <span className="page-link">
-                  1<span className="sr-only">(current)</span>
-                </span>
-              </li>
-              <li className="page-item">
-                <a className="page-link" href="#">
-                  2
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link" href="#">
-                  3
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link" href="#">
-                  Next <i className="far fa-chevron-right" />
-                </a>
-              </li>
-            </ul>
           </div>
-
-         
         </div>
-      </div>
-    </section>
-      {/* <Services2 extraClass="bgc-black text-white" /> */}
+      </section>
+      {/* Services Area End */}
+
+      {/* Why Choose Us Area Start */}
       <WhyChooseUs3 />
+      {/* Why Choose Us Area End */}
+
+      {/* FAQ Area Start */}
       <Faq2 />
+      {/* FAQ Area End */}
     </RiddaLayout>
   );
 };
+
 export default page;

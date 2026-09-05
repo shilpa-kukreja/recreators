@@ -5,6 +5,7 @@ import { TestimonialsSlider4 } from "@/components/sliders/TestimonialSlider";
 import WorkingProcess from "@/components/WorkingProcess";
 import RiddaLayout from "@/layout/RiddaLayout";
 import Link from "next/link";
+
 const page = () => {
   return (
     <RiddaLayout header={4} footer={4} bodyClass="home-four">
@@ -20,12 +21,14 @@ const page = () => {
                 data-aos-offset={50}
               >
                 <h1>Transform Your Brand with Powerful Video Marketing</h1>
+
                 <p>
-                  Engage, Inspire, and Convert with Sayan's Expert Video
+                  Engage, Inspire, and Convert with Sayan&apos;s Expert Video
                   Solutions
                 </p>
+
                 <Link
-                  href="project-grid"
+                  href="/project-grid"
                   className="theme-btn hover-secondary color-white mt-35 rmt-20"
                   data-hover="Get Started Now"
                 >
@@ -37,11 +40,13 @@ const page = () => {
         </div>
       </section>
       {/* Hero Area End */}
+
       {/* Video Area Start */}
       <div
         className="video-area bgc-lighter-green bgp-bottom rel z-1"
         style={{
-          backgroundImage: "url(assets/images/background/video-bg-dots.png)",
+          backgroundImage:
+            "url(/assets/images/background/video-bg-dots.png)",
         }}
       >
         <div className="container container-1290">
@@ -51,89 +56,110 @@ const page = () => {
             data-aos-duration={1500}
             data-aos-offset={50}
           >
-            <img src="assets/images/video/video-bg.jpg" alt="Video" />
+            <img src="/assets/images/video/video-bg.jpg" alt="Video" />
+
             <a
               href="https://www.youtube.com/watch?v=TfU0qjuZkJ4"
               className="mfp-iframe video-play"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fas fa-play" />
             </a>
           </div>
         </div>
+
         <span className="marquee-wrap style-two py-20 rpy-10 bgc-secondary">
           <span className="marquee-inner left">
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Video Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SEO Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SMM Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Digital Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Influencer Marketing
             </span>
           </span>
+
           <span className="marquee-inner left">
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Video Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SEO Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SMM Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Digital Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Influencer Marketing
             </span>
           </span>
+
           <span className="marquee-inner left">
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Video Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SEO Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SMM Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Digital Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Influencer Marketing
@@ -142,11 +168,13 @@ const page = () => {
         </span>
       </div>
       {/* Video Area End */}
-      {/* Client Logo Area start */}
+
+      {/* Client Logo Area Start */}
       <div
         className="client-logo-area bgc-lighter-green pt-95 pb-85"
         style={{
-          backgroundImage: "url(assets/images/background/video-bg-dots.png)",
+          backgroundImage:
+            "url(/assets/images/background/video-bg-dots.png)",
         }}
       >
         <div className="container container-1290">
@@ -159,12 +187,14 @@ const page = () => {
             >
               <h6>Trusted by industry leaders</h6>
             </div>
+
             <ClientSlider />
           </div>
         </div>
       </div>
-      {/* Client Logo Area end */}
-      {/* About Us Area start */}
+      {/* Client Logo Area End */}
+
+      {/* About Us Area Start */}
       <section className="about-us-area py-100 rel z-1">
         <div className="container container-1290">
           <div className="row justify-content-between align-items-center">
@@ -179,24 +209,28 @@ const page = () => {
                   <span className="subtitle color-primary mt-10 mb-15">
                     About Agency
                   </span>
+
                   <h2>
                     Welcome Ridda Video Marketing Agency to grow your business
                   </h2>
                 </div>
+
                 <p>
-                  Understanding your marketing videos’ performance can be like
-                  looking for a needle in a haystack. Vidyard’s online video
-                  marketing platform is a magnet for your needle.
+                  Understanding your marketing videos&apos; performance can be
+                  like looking for a needle in a haystack. Vidyard&apos;s
+                  online video marketing platform is a magnet for your needle.
                 </p>
+
                 <Link
-                  href="about"
+                  href="/about"
                   className="theme-btn hover-secondary color-white mt-20"
-                  
+                  data-hover="Learn More"
                 >
-                  <span>Learn More Us</span>
+                  <span>Learn More</span>
                 </Link>
               </div>
             </div>
+
             <div className="col-lg-6">
               <div
                 className="about-three-image-part"
@@ -205,15 +239,23 @@ const page = () => {
                 data-aos-offset={50}
               >
                 <div className="image">
-                  <img src="assets/images/about/about-three1.jpg" alt="About" />
+                  <img
+                    src="/assets/images/about/about-three1.jpg"
+                    alt="About"
+                  />
                 </div>
+
                 <div className="image mt-30">
-                  <img src="assets/images/about/about-three2.jpg" alt="About" />
+                  <img
+                    src="/assets/images/about/about-three2.jpg"
+                    alt="About"
+                  />
                 </div>
+
                 <div className="logo">
                   <Link href="/">
                     <img
-                      src="assets/images/logos/logo-two-white.png"
+                      src="/assets/images/logos/logo-two-white.png"
                       alt="Logo"
                     />
                   </Link>
@@ -223,8 +265,9 @@ const page = () => {
           </div>
         </div>
       </section>
-      {/* About Us Area end */}
-      {/* Our Service Area start */}
+      {/* About Us Area End */}
+
+      {/* Our Service Area Start */}
       <section className="our-service-area bordered-top pt-100 pb-70 rel z-1">
         <div className="container container-1290">
           <div className="row justify-content-center pb-30">
@@ -236,11 +279,14 @@ const page = () => {
             >
               <div className="section-title text-center mb-25">
                 <span className="subtitle mt-10 mb-15">Our Services</span>
+
                 <h2>Explore Popular Services</h2>
               </div>
             </div>
           </div>
+
           <div className="row">
+            {/* Service 1 */}
             <div
               className="col-md-6"
               data-aos="fade-up"
@@ -251,18 +297,22 @@ const page = () => {
                 <div className="icon">
                   <i className="flaticon-film-camera" />
                 </div>
+
                 <div className="content">
                   <h4>
-                    <Link href="service-details">Video Production</Link>
+                    <Link href="/service-details">Video Production</Link>
                   </h4>
+
                   <p>
                     Video production is the process of creating visually
-                    engaging and impactful video content communicates brand’s
-                    message
+                    engaging and impactful video content that communicates a
+                    brand&apos;s message.
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Service 2 */}
             <div
               className="col-md-6"
               data-aos="fade-up"
@@ -274,18 +324,24 @@ const page = () => {
                 <div className="icon">
                   <i className="flaticon-video-marketing" />
                 </div>
+
                 <div className="content">
                   <h4>
-                    <Link href="service-details">Video Marketing Strategy</Link>
+                    <Link href="/service-details">
+                      Video Marketing Strategy
+                    </Link>
                   </h4>
+
                   <p>
                     A Video Marketing Strategy is a carefully crafted plan
-                    leverages video content to achieve specific business goals,
-                    such
+                    that leverages video content to achieve specific business
+                    goals.
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Service 3 */}
             <div
               className="col-md-6"
               data-aos="fade-up"
@@ -297,19 +353,24 @@ const page = () => {
                 <div className="icon">
                   <i className="flaticon-animate" />
                 </div>
+
                 <div className="content">
                   <h4>
-                    <Link href="service-details">
+                    <Link href="/service-details">
                       Animation and Motion Graphics
                     </Link>
                   </h4>
+
                   <p>
                     Animation and motion graphics are dynamic visual elements
-                    that bring static designs to life, making them more engaging
+                    that bring static designs to life, making them more
+                    engaging.
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Service 4 */}
             <div
               className="col-md-6"
               data-aos="fade-up"
@@ -321,14 +382,18 @@ const page = () => {
                 <div className="icon">
                   <i className="flaticon-live-streaming" />
                 </div>
+
                 <div className="content">
                   <h4>
-                    <Link href="service-details">Live Streaming Services</Link>
+                    <Link href="/service-details">
+                      Live Streaming Services
+                    </Link>
                   </h4>
+
                   <p>
-                    Live streaming services enable businesses individuals
-                    broadcast events, webinars, product launches, or other
-                    content
+                    Live streaming services enable businesses and individuals
+                    to broadcast events, webinars, product launches, or other
+                    content.
                   </p>
                 </div>
               </div>
@@ -336,10 +401,12 @@ const page = () => {
           </div>
         </div>
       </section>
-      {/* Our Service Area end */}
+      {/* Our Service Area End */}
+
       {/* Case Studies Area Start */}
       <CaseStudies />
       {/* Case Studies Area End */}
+
       {/* Testimonials Area Start */}
       <section className="testimonials-three-area text-center py-100 rel z-1">
         <div className="container-fluid">
@@ -355,11 +422,15 @@ const page = () => {
                   <span className="subtitle color-primary mt-10 mb-15">
                     Testimonials
                   </span>
+
                   <h2>What Our Clients Say</h2>
                 </div>
+
                 <TestimonialsSlider4 />
               </div>
             </div>
+
+            {/* Left Testimonial Images */}
             <div className="col-xl-3 col-6 order-xl-0">
               <div
                 className="testi-small-images mt-20"
@@ -369,46 +440,51 @@ const page = () => {
               >
                 <div className="image">
                   <img
-                    src="assets/images/testimonials/testi-small-img1.jpg"
+                    src="/assets/images/testimonials/testi-small-img1.jpg"
                     alt="Testimonials"
                   />
                   <img
-                    src="assets/images/testimonials/testi-small-img2.jpg"
-                    alt="Testimonials"
-                  />
-                </div>
-                <div className="image">
-                  <img
-                    src="assets/images/testimonials/testi-small-img3.jpg"
-                    alt="Testimonials"
-                  />
-                  <img
-                    src="assets/images/testimonials/testi-small-img4.jpg"
+                    src="/assets/images/testimonials/testi-small-img2.jpg"
                     alt="Testimonials"
                   />
                 </div>
+
                 <div className="image">
                   <img
-                    src="assets/images/testimonials/testi-small-img5.jpg"
+                    src="/assets/images/testimonials/testi-small-img3.jpg"
                     alt="Testimonials"
                   />
                   <img
-                    src="assets/images/testimonials/testi-small-img6.jpg"
+                    src="/assets/images/testimonials/testi-small-img4.jpg"
                     alt="Testimonials"
                   />
                 </div>
+
                 <div className="image">
                   <img
-                    src="assets/images/testimonials/testi-small-img7.jpg"
+                    src="/assets/images/testimonials/testi-small-img5.jpg"
                     alt="Testimonials"
                   />
                   <img
-                    src="assets/images/testimonials/testi-small-img8.jpg"
+                    src="/assets/images/testimonials/testi-small-img6.jpg"
+                    alt="Testimonials"
+                  />
+                </div>
+
+                <div className="image">
+                  <img
+                    src="/assets/images/testimonials/testi-small-img7.jpg"
+                    alt="Testimonials"
+                  />
+                  <img
+                    src="/assets/images/testimonials/testi-small-img8.jpg"
                     alt="Testimonials"
                   />
                 </div>
               </div>
             </div>
+
+            {/* Right Testimonial Images */}
             <div className="col-xl-3 col-6 order-xl-2">
               <div
                 className="testi-small-images mt-20"
@@ -418,41 +494,44 @@ const page = () => {
               >
                 <div className="image">
                   <img
-                    src="assets/images/testimonials/testi-small-img11.jpg"
+                    src="/assets/images/testimonials/testi-small-img11.jpg"
                     alt="Testimonials"
                   />
                   <img
-                    src="assets/images/testimonials/testi-small-img12.jpg"
-                    alt="Testimonials"
-                  />
-                </div>
-                <div className="image">
-                  <img
-                    src="assets/images/testimonials/testi-small-img13.jpg"
-                    alt="Testimonials"
-                  />
-                  <img
-                    src="assets/images/testimonials/testi-small-img14.jpg"
+                    src="/assets/images/testimonials/testi-small-img12.jpg"
                     alt="Testimonials"
                   />
                 </div>
+
                 <div className="image">
                   <img
-                    src="assets/images/testimonials/testi-small-img15.jpg"
+                    src="/assets/images/testimonials/testi-small-img13.jpg"
                     alt="Testimonials"
                   />
                   <img
-                    src="assets/images/testimonials/testi-small-img16.jpg"
+                    src="/assets/images/testimonials/testi-small-img14.jpg"
                     alt="Testimonials"
                   />
                 </div>
+
                 <div className="image">
                   <img
-                    src="assets/images/testimonials/testi-small-img17.jpg"
+                    src="/assets/images/testimonials/testi-small-img15.jpg"
                     alt="Testimonials"
                   />
                   <img
-                    src="assets/images/testimonials/testi-small-img18.jpg"
+                    src="/assets/images/testimonials/testi-small-img16.jpg"
+                    alt="Testimonials"
+                  />
+                </div>
+
+                <div className="image">
+                  <img
+                    src="/assets/images/testimonials/testi-small-img17.jpg"
+                    alt="Testimonials"
+                  />
+                  <img
+                    src="/assets/images/testimonials/testi-small-img18.jpg"
                     alt="Testimonials"
                   />
                 </div>
@@ -462,6 +541,7 @@ const page = () => {
         </div>
       </section>
       {/* Testimonials Area End */}
+
       {/* Headline Area Start */}
       <div className="headline-area rel z-1">
         <span className="marquee-wrap style-two py-20 rpy-10 bgc-secondary">
@@ -470,74 +550,91 @@ const page = () => {
               <i className="flaticon-asterisk" />
               Video Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SEO Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SMM Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Digital Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Influencer Marketing
             </span>
           </span>
+
           <span className="marquee-inner left">
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Video Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SEO Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SMM Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Digital Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Influencer Marketing
             </span>
           </span>
+
           <span className="marquee-inner left">
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Video Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SEO Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               SMM Marketing
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Digital Marketing Agency
             </span>
+
             <span className="marquee-item">
               <i className="flaticon-asterisk" />
               Influencer Marketing
@@ -546,65 +643,84 @@ const page = () => {
         </span>
       </div>
       {/* Headline Area End */}
+
       {/* Working Process Area Start */}
       <WorkingProcess />
       {/* Working Process Area End */}
-      {/* Why Choose Us Area start */}
+
+      {/* Why Choose Us Area Start */}
       <section className="why-choose-us-area bgc-black rel z-1">
         <div className="container container-1290">
           <div className="row justify-content-between">
             <div className="col-xl-5 col-lg-6 text-white">
               <div className="why-choose-left py-100 d-flex flex-column h-100 align-items-start">
                 <div className="section-title mb-45">
-                  <span className="subtitle mt-10 mb-15">Why Choose Us?</span>
+                  <span className="subtitle mt-10 mb-15">
+                    Why Choose Us?
+                  </span>
+
                   <h2>Why People Choose Our Ridda Agency Service</h2>
                 </div>
+
                 <div className="text mt-auto">
                   Video marketing has become a powerful tool for businesses to
-                  connect with their audience to more engaging and memorable way
-                  the visual and auditory elements of video, companies
+                  connect with their audience in a more engaging and memorable
+                  way. Through the visual and auditory elements of video,
+                  companies can communicate their message effectively.
                 </div>
+
                 <Link
-                  href="about"
+                  href="/about"
                   className="theme-btn bgc-secondary mt-40"
-                  data-hover="Learn More 
+                  data-hover="Learn More"
                 >
-                  <span>Learn More Us</span>
+                  <span>Learn More</span>
                 </Link>
               </div>
             </div>
+
             <div className="col-xl-5 col-lg-6">
               <div className="why-choose-right py-100">
                 <div className="service-item style-five">
                   <h5>
                     <i className="far fa-tools" />{" "}
-                    <Link href="service-details">Expertise and Experience</Link>
+                    <Link href="/service-details">
+                      Expertise and Experience
+                    </Link>
                   </h5>
+
                   <p>
-                    Expertise and Experience critical components distinguish
-                    professional agency specialized knowledge.
+                    Expertise and experience are critical components that
+                    distinguish a professional agency with specialized
+                    knowledge.
                   </p>
                 </div>
+
                 <div className="service-item style-five">
                   <h5>
                     <i className="far fa-cog" />{" "}
-                    <Link href="service-details">Customized Solutions</Link>
+                    <Link href="/service-details">
+                      Customized Solutions
+                    </Link>
                   </h5>
+
                   <p>
-                    Expertise and Experience critical components distinguish
-                    professional agency specialized knowledge.
+                    We provide customized solutions designed around your
+                    business goals, audience, and marketing requirements.
                   </p>
                 </div>
+
                 <div className="service-item style-five">
                   <h5>
                     <i className="far fa-gift" />{" "}
-                    <Link href="service-details">
+                    <Link href="/service-details">
                       Support &amp; Proven Results
                     </Link>
                   </h5>
+
                   <p>
-                    Expertise and Experience critical components distinguish
-                    professional agency specialized knowledge.
+                    Our approach combines continuous support with proven
+                    strategies focused on measurable marketing results.
                   </p>
                 </div>
               </div>
@@ -612,11 +728,13 @@ const page = () => {
           </div>
         </div>
       </section>
-      {/* Why Choose Us Area end */}
-      {/* Blog Area start */}
+      {/* Why Choose Us Area End */}
+
+      {/* Blog Area Start */}
       <Blog2 />
-      {/* Blog Area end */}
-      {/* Contact area start */}
+      {/* Blog Area End */}
+
+      {/* Contact Area Start */}
       <section className="contact-area pb-100">
         <div className="container container-1290">
           <div className="row align-items-center justify-content-between">
@@ -629,62 +747,81 @@ const page = () => {
               >
                 <div className="section-title mb-30">
                   <h2>Ready To Take Your SEO to the Next Level?</h2>
+
                   <p>
                     Contact us today to schedule a consultation or learn more
-                    about our services
+                    about our services.
                   </p>
                 </div>
+
                 <div className="contact-info-two-item">
                   <div className="icon">
                     <i className="flaticon-world-map" />
                   </div>
+
                   <div className="text">
                     Main Location
+
                     <span className="h6">
                       57 Main Street, Melbourne, Australia
                     </span>
                   </div>
                 </div>
+
                 <div className="contact-info-two-item">
                   <div className="icon">
                     <i className="flaticon-email" />
                   </div>
+
                   <div className="text">
                     Email Address
+
                     <span className="h6">
-                      <a href="mailto:support@gmail.com">support@gmail.com</a>
+                      <a href="mailto:support@gmail.com">
+                        support@gmail.com
+                      </a>
                     </span>
                   </div>
                 </div>
+
                 <div className="contact-info-two-item">
                   <div className="icon">
                     <i className="flaticon-call" />
                   </div>
+
                   <div className="text">
                     Need Helps
+
                     <span className="h6">
-                      <a href="callto:+000(123)45688">+000 (123) 456 88</a>
+                      <a href="tel:+00012345688">+000 (123) 456 88</a>
                     </span>
                   </div>
                 </div>
+
                 <hr className="my-35" />
+
                 <div className="social-style-two mt-15">
                   <h6>Follow Us</h6>
-                  <Link href="contact">
+
+                  <Link href="/contact">
                     <i className="fab fa-facebook-f" />
                   </Link>
-                  <Link href="contact">
+
+                  <Link href="/contact">
                     <i className="fab fa-twitter" />
                   </Link>
-                  <Link href="contact">
+
+                  <Link href="/contact">
                     <i className="fab fa-youtube" />
                   </Link>
-                  <Link href="contact">
+
+                  <Link href="/contact">
                     <i className="fab fa-linkedin-in" />
                   </Link>
                 </div>
               </div>
             </div>
+
             <div className="col-lg-6">
               <form
                 className="contact-form style-two z-1 rel"
@@ -696,7 +833,12 @@ const page = () => {
                 data-aos-offset={50}
               >
                 <h3>Get In Touch</h3>
-                <p>Contact us today to schedule consultation to expert team</p>
+
+                <p>
+                  Contact us today to schedule a consultation with our expert
+                  team.
+                </p>
+
                 <div className="row mt-30">
                   <div className="col-sm-6">
                     <div className="form-group">
@@ -706,11 +848,11 @@ const page = () => {
                         name="name"
                         className="form-control"
                         placeholder="Full Name"
-                        defaultValue
                         required
                       />
                     </div>
                   </div>
+
                   <div className="col-sm-6">
                     <div className="form-group">
                       <input
@@ -719,11 +861,11 @@ const page = () => {
                         name="phone_number"
                         className="form-control"
                         placeholder="Phone No"
-                        defaultValue
                         required
                       />
                     </div>
                   </div>
+
                   <div className="col-sm-12">
                     <div className="form-group">
                       <input
@@ -732,11 +874,11 @@ const page = () => {
                         name="email"
                         className="form-control"
                         placeholder="Email Address"
-                        defaultValue
                         required
                       />
                     </div>
                   </div>
+
                   <div className="col-sm-12">
                     <div className="form-group">
                       <textarea
@@ -746,10 +888,11 @@ const page = () => {
                         rows={4}
                         placeholder="Write Message"
                         required
-                        defaultValue={""}
+                        defaultValue=""
                       />
                     </div>
                   </div>
+
                   <div className="col-sm-12">
                     <div className="form-group mb-0">
                       <ul className="radio-filter mb-25">
@@ -761,16 +904,18 @@ const page = () => {
                             name="ByActivities"
                             id="activity1"
                           />
+
                           <label htmlFor="activity1">
-                            Save my name, email, and website in this browser for
-                            the next time I comment.
+                            Save my name, email, and website in this browser
+                            for the next time I comment.
                           </label>
                         </li>
                       </ul>
+
                       <button
                         type="submit"
                         className="theme-btn bgc-secondary"
-                        data-hover="Send Us  Message"
+                        data-hover="Send Us Message"
                       >
                         <span>Send Us Message</span>
                       </button>
@@ -782,8 +927,9 @@ const page = () => {
           </div>
         </div>
       </section>
-      {/* Contact area end */}
+      {/* Contact Area End */}
     </RiddaLayout>
   );
 };
+
 export default page;
